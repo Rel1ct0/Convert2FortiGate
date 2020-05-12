@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Converts ASA firewall configuration into compatible FortiGate"""
+"""Converts firewall configuration into compatible FortiGate"""
 
 
 import sys
@@ -7,21 +7,26 @@ from Scripts import parseconfig
 import pprint
 
 if len(sys.argv) == 1:
-    print("Usage: ASA2FortiGate.py <asaconfig>.txt [fgateconfig.txt]")
+    print("Usage: ASA2FortiGate.py <fwtype> <asaconfig>.txt [fgateconfig.txt]")
+    print("Supported firewall types are:")
+    print("1. ASA")
+    print("2. IOS")
     exit()
 
-if len(sys.argv) == 3:
-    OUTFILE = sys.argv[2]
+if len(sys.argv) == 4:
+    OUTFILE = sys.argv[3]
 else:
     OUTFILE = "fgateconfig.txt"
 
+FWTYPE = sys.argv[1]
+
 try:
-    with open(sys.argv[1]) as INPUTFILE:
+    with open(sys.argv[2]) as INPUTFILE:
         INPUTDATA = INPUTFILE.readlines()
 except Exception as error:
     print("Can not open", sys.argv[1], "for reading, got", error)
     exit()
 
-ConfigDict = parseconfig.parseconfig(INPUTDATA)
+ConfigDict = parseconfig.parseconfig(INPUTDATA, FWTYPE)
 
 pprint.pprint(ConfigDict)
