@@ -285,8 +285,30 @@ interface Management0/0
  security-level 100
  no ip address
 !
-
-
+interface GigabitEthernet10/0
+ channel-group 1 mode on
+!
+interface GigabitEthernet10/1
+ channel-group 1 mode on
+!
+interface Port-channel1
+ port-channel load-balance src-mac
+ no shu
+!
+interface Port-channel1.182
+ description LAN
+ vlan 182
+ nameif inside
+ security-level 100
+ ip address 192.168.252.18 255.255.255.252
+!
+interface Redundant1
+ member-interface GigabitEthernet0/2
+ member-interface GigabitEthernet0/3
+ nameinf outside
+ security-level 0
+ ip address 192.168.1.1 255.255.225.0
+!
  name-server 192.168.60.2 CRPT_Servers_Talmer
  name-server 192.168.60.1 CRPT_Servers_Talmer
  domain-name crpt.local
