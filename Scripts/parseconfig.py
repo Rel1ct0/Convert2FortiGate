@@ -1,11 +1,11 @@
 """Reads input config and converts in into Dict"""
 
 
-from Scripts.ASA import ASAParseConfig
-from Scripts.IOS import IOSParseConfig
+import Scripts.ASA as ASA
+import Scripts.IOS as IOS
 
 
-SUPPORTED_FWTYPES = ['1', 'ASA', '2', 'IOS']
+SUPPORTED_FWTYPES = ['1', 'asa', '2', 'ios']
 
 
 def parseconfig(DATA, FWTYPE) -> dict:
@@ -16,8 +16,8 @@ def parseconfig(DATA, FWTYPE) -> dict:
     result = dict()
 
     if FWTYPE in SUPPORTED_FWTYPES[0:2]:
-        result["interfaces"] = ASAParseConfig.getinterfaces(DATA)
+        result["interfaces"] = ASA.getinterfaces(DATA)
     if FWTYPE in SUPPORTED_FWTYPES[2:4]:
-        result["interfaces"] = IOSParseConfig.getinterfaces(DATA)
+        result["interfaces"] = IOS.getinterfaces(DATA)
 
     return result
