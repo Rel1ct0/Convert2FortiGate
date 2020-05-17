@@ -7,7 +7,7 @@ from Scripts import parseconfig
 import pprint
 
 if len(sys.argv) == 1 or len(sys.argv) > 4:
-    print("Usage: ASA2FortiGate.py <fwtype> <asaconfig.txt> [fgateconfig.txt]")
+    print('Usage: Convert2FortiGate.py <fwtype> <asaconfig.txt> [fgateconfig.txt]')
     print("Supported firewall types are:")
     print("1. ASA")
     print("2. IOS")
