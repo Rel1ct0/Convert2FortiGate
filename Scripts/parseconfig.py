@@ -3,6 +3,7 @@
 
 import Scripts.ASA as ASA
 import Scripts.IOS as IOS
+import Scripts.FortiGate as FortiGate
 
 
 SUPPORTED_FWTYPES = ['1', 'asa', '2', 'ios']
@@ -21,4 +22,9 @@ def parseconfig(DATA, FWTYPE) -> dict:
         result["interfaces"] = IOS.getInterfaces(DATA)
         result["object-groups"] = IOS.getObjectGroups(DATA)
 
+    return result
+
+def createconfig(DATA) -> dict:
+    result = str()
+    result = result + FortiGate.setInterfaces(DATA)
     return result
