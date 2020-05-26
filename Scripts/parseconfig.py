@@ -18,6 +18,7 @@ def parseconfig(DATA, FWTYPE) -> dict:
     if FWTYPE in SUPPORTED_FWTYPES[0:2]:
         result["interfaces"] = ASA.getinterfaces(DATA)
     if FWTYPE in SUPPORTED_FWTYPES[2:4]:
-        result["interfaces"] = IOS.getinterfaces(DATA)
+        result["interfaces"] = IOS.getInterfaces(DATA)
+        result["object-groups"] = IOS.getObjectGroups(DATA)
 
     return result

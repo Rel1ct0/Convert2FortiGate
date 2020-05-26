@@ -1,4 +1,4 @@
-def getinterfaces(DATA) -> dict:
+def getInterfaces(DATA) -> dict:
     result = dict()
     interface_name = ""
     interface_params = dict()
@@ -23,10 +23,6 @@ def getinterfaces(DATA) -> dict:
             else:
                 if data[0] == "vlan":
                     interface_params["vlan"] = data[1]
-                if data[0] == "nameif":
-                    interface_params["nameif"] = data[1]
-                if data[0] == "security-level":
-                    interface_params["security-level"] = data[1]
                 if data[0] == "ip" and data[1] == "address":
                     interface_params["ip"] = data[2]
                     interface_params["netmask"] = data[3]
