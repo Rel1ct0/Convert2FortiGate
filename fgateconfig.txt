@@ -1,0 +1,2418 @@
+config system interface
+    edit port1
+    next
+    edit port1_10
+        set interface port1
+        set vlanid 10
+    next
+    edit port1_101
+        set interface port1
+        set vlanid 101
+        set ip 172.16.16.2 255.255.255.128
+    next
+    edit port1_102
+        set interface port1
+        set vlanid 102
+        set ip 172.16.16.130 255.255.255.128
+    next
+    edit port1_103
+        set interface port1
+        set vlanid 103
+        set ip 172.16.28.2 255.255.252.0
+    next
+    edit port1_104
+        set interface port1
+        set vlanid 104
+        set ip 172.16.24.2 255.255.252.0
+    next
+    edit port1_105
+        set interface port1
+        set vlanid 105
+        set ip 172.16.17.2 255.255.255.224
+    next
+    edit port1_106
+        set interface port1
+        set vlanid 106
+        set ip 192.168.12.2 255.255.252.0
+    next
+    edit port1_107
+        set interface port1
+        set vlanid 107
+        set ip 172.16.23.2 255.255.255.128
+    next
+    edit port1_108
+        set interface port1
+        set vlanid 108
+        set ip 172.16.22.2 255.255.255.128
+    next
+    edit port1_109
+        set interface port1
+        set vlanid 109
+        set ip 172.16.17.34 255.255.255.224
+    next
+    edit port1_112
+        set interface port1
+        set vlanid 112
+        set ip 172.16.21.2 255.255.255.128
+    next
+    edit port1_113
+        set interface port1
+        set vlanid 113
+        set ip 172.16.17.66 255.255.255.224
+    next
+    edit port1_121
+        set interface port1
+        set vlanid 121
+        set ip 192.168.21.2 255.255.255.0
+    next
+    edit port1_122
+        set interface port1
+        set vlanid 122
+        set ip 192.168.11.2 255.255.255.0
+    next
+    edit port1_125
+        set interface port1
+        set vlanid 125
+        set ip 172.16.17.130 255.255.255.192
+    next
+    edit port1_126
+        set interface port1
+        set vlanid 126
+        set ip 172.16.17.194 255.255.255.192
+    next
+    edit port1_127
+        set interface port1
+        set vlanid 127
+        set ip 172.18.1.2 255.255.255.0
+    next
+    edit port1_130
+        set interface port1
+        set vlanid 130
+        set ip 172.16.23.130 255.255.255.240
+    next
+    edit port1_131
+        set interface port1
+        set vlanid 131
+        set ip 172.30.1.5 255.255.255.0
+    next
+    edit port1_197
+        set interface port1
+        set vlanid 197
+        set ip 192.168.17.2 255.255.255.0
+    next
+    edit port1_198
+        set interface port1
+        set vlanid 198
+        set ip 192.168.18.1 255.255.255.0
+    next
+    edit port1_199
+        set interface port1
+        set vlanid 199
+        set ip 192.168.19.2 255.255.255.0
+    next
+    edit port2
+        set ip 89.175.187.18 255.255.255.240
+    next
+end
+config firewall address
+    edit host_172.16.16.15
+        set subnet 172.16.16.15 255.255.255.255
+    next
+    edit host_172.16.64.13
+        set subnet 172.16.64.13 255.255.255.255
+    next
+    edit host_172.17.250.21
+        set subnet 172.17.250.21 255.255.255.255
+    next
+    edit host_172.17.251.21
+        set subnet 172.17.251.21 255.255.255.255
+    next
+    edit host_172.17.252.21
+        set subnet 172.17.252.21 255.255.255.255
+    next
+    edit host_172.16.17.11
+        set subnet 172.16.17.11 255.255.255.255
+    next
+    edit host_172.16.17.12
+        set subnet 172.16.17.12 255.255.255.255
+    next
+    edit host_172.16.61.5
+        set subnet 172.16.61.5 255.255.255.255
+    next
+    edit host_172.16.61.10
+        set subnet 172.16.61.10 255.255.255.255
+    next
+    edit net_172.16.71.0_255.255.255.0
+        set subnet 172.16.71.0 255.255.255.0
+    next
+    edit net_172.16.23.0_255.255.255.128
+        set subnet 172.16.23.0 255.255.255.128
+    next
+    edit net_172.16.57.64_255.255.255.224
+        set subnet 172.16.57.64 255.255.255.224
+    next
+    edit net_172.16.91.0_255.255.255.128
+        set subnet 172.16.91.0 255.255.255.128
+    next
+    edit net_172.16.23.128_255.255.255.240
+        set subnet 172.16.23.128 255.255.255.240
+    next
+    edit net_172.16.24.0_255.255.252.0
+        set subnet 172.16.24.0 255.255.252.0
+    next
+    edit net_172.16.72.0_255.255.252.0
+        set subnet 172.16.72.0 255.255.252.0
+    next
+    edit net_172.16.60.0_255.255.254.0
+        set subnet 172.16.60.0 255.255.254.0
+    next
+    edit net_172.16.46.0_255.255.255.0
+        set subnet 172.16.46.0 255.255.255.0
+    next
+    edit net_172.17.15.0_255.255.255.0
+        set subnet 172.17.15.0 255.255.255.0
+    next
+    edit net_172.17.250.0_255.255.255.0
+        set subnet 172.17.250.0 255.255.255.0
+    next
+    edit net_172.17.251.0_255.255.255.0
+        set subnet 172.17.251.0 255.255.255.0
+    next
+    edit net_172.17.252.0_255.255.255.0
+        set subnet 172.17.252.0 255.255.255.0
+    next
+    edit net_172.17.0.0_255.255.0.0
+        set subnet 172.17.0.0 255.255.0.0
+    next
+    edit net_172.16.28.0_255.255.252.0
+        set subnet 172.16.28.0 255.255.252.0
+    next
+    edit net_172.16.76.0_255.255.252.0
+        set subnet 172.16.76.0 255.255.252.0
+    next
+    edit net_172.16.62.0_255.255.254.0
+        set subnet 172.16.62.0 255.255.254.0
+    next
+    edit net_172.16.47.0_255.255.255.0
+        set subnet 172.16.47.0 255.255.255.0
+    next
+    edit net_172.16.94.0_255.255.254.0
+        set subnet 172.16.94.0 255.255.254.0
+    next
+    edit net_172.16.80.128_255.255.255.128
+        set subnet 172.16.80.128 255.255.255.128
+    next
+    edit net_172.16.82.128_255.255.255.128
+        set subnet 172.16.82.128 255.255.255.128
+    next
+    edit net_185.27.68.0_255.255.252.0
+        set subnet 185.27.68.0 255.255.252.0
+    next
+    edit net_95.46.232.0_255.255.248.0
+        set subnet 95.46.232.0 255.255.248.0
+    next
+    edit net_185.27.70.0_255.255.254.0
+        set subnet 185.27.70.0 255.255.254.0
+    next
+    edit host_192.168.100.100
+        set subnet 192.168.100.100 255.255.255.255
+    next
+    edit net_89.218.78.44_255.255.255.252
+        set subnet 89.218.78.44 255.255.255.252
+    next
+    edit net_89.218.78.76_255.255.255.252
+        set subnet 89.218.78.76 255.255.255.252
+    next
+    edit host_185.215.161.10
+        set subnet 185.215.161.10 255.255.255.255
+    next
+    edit net_172.16.83.0_255.255.255.0
+        set subnet 172.16.83.0 255.255.255.0
+    next
+    edit net_195.189.69.64_255.255.255.252
+        set subnet 195.189.69.64 255.255.255.252
+    next
+    edit host_91.121.109.209
+        set subnet 91.121.109.209 255.255.255.255
+    next
+    edit host_217.12.202.40
+        set subnet 217.12.202.40 255.255.255.255
+    next
+    edit host_94.242.222.68
+        set subnet 94.242.222.68 255.255.255.255
+    next
+    edit host_82.118.242.124
+        set subnet 82.118.242.124 255.255.255.255
+    next
+    edit host_46.151.209.33
+        set subnet 46.151.209.33 255.255.255.255
+    next
+    edit host_217.79.179.14
+        set subnet 217.79.179.14 255.255.255.255
+    next
+    edit host_91.214.203.144
+        set subnet 91.214.203.144 255.255.255.255
+    next
+    edit host_95.211.198.231
+        set subnet 95.211.198.231 255.255.255.255
+    next
+    edit host_195.154.180.60
+        set subnet 195.154.180.60 255.255.255.255
+    next
+    edit host_5.149.250.54
+        set subnet 5.149.250.54 255.255.255.255
+    next
+    edit host_91.200.13.76
+        set subnet 91.200.13.76 255.255.255.255
+    next
+    edit host_94.185.80.82
+        set subnet 94.185.80.82 255.255.255.255
+    next
+    edit host_62.210.180.229
+        set subnet 62.210.180.229 255.255.255.255
+    next
+    edit host_193.109.247.224
+        set subnet 193.109.247.224 255.255.255.255
+    next
+    edit host_188.126.73.4
+        set subnet 188.126.73.4 255.255.255.255
+    next
+    edit host_188.162.39.14
+        set subnet 188.162.39.14 255.255.255.255
+    next
+    edit host_185.248.100.226
+        set subnet 185.248.100.226 255.255.255.255
+    next
+    edit host_77.72.83.225
+        set subnet 77.72.83.225 255.255.255.255
+    next
+    edit host_188.92.74.16
+        set subnet 188.92.74.16 255.255.255.255
+    next
+    edit host_185.222.201.20
+        set subnet 185.222.201.20 255.255.255.255
+    next
+    edit host_89.32.82.199
+        set subnet 89.32.82.199 255.255.255.255
+    next
+    edit host_67.169.57.222
+        set subnet 67.169.57.222 255.255.255.255
+    next
+    edit host_176.113.246.8
+        set subnet 176.113.246.8 255.255.255.255
+    next
+    edit host_185.156.177.15
+        set subnet 185.156.177.15 255.255.255.255
+    next
+    edit host_181.57.134.246
+        set subnet 181.57.134.246 255.255.255.255
+    next
+    edit host_195.114.121.254
+        set subnet 195.114.121.254 255.255.255.255
+    next
+    edit host_82.145.242.22
+        set subnet 82.145.242.22 255.255.255.255
+    next
+    edit host_185.234.218.96
+        set subnet 185.234.218.96 255.255.255.255
+    next
+    edit net_182.156.75.252_255.255.255.252
+        set subnet 182.156.75.252 255.255.255.252
+    next
+    edit net_106.51.238.172_255.255.255.252
+        set subnet 106.51.238.172 255.255.255.252
+    next
+    edit net_106.51.238.176_255.255.255.248
+        set subnet 106.51.238.176 255.255.255.248
+    next
+    edit net_172.16.80.0_255.255.255.192
+        set subnet 172.16.80.0 255.255.255.192
+    next
+    edit net_172.16.80.0_255.255.254.0
+        set subnet 172.16.80.0 255.255.254.0
+    next
+    edit net_172.16.81.0_255.255.255.0
+        set subnet 172.16.81.0 255.255.255.0
+    next
+    edit net_172.16.89.64_255.255.255.224
+        set subnet 172.16.89.64 255.255.255.224
+    next
+    edit net_182.75.10.192_255.255.255.252
+        set subnet 182.75.10.192 255.255.255.252
+    next
+    edit net_182.74.160.96_255.255.255.248
+        set subnet 182.74.160.96 255.255.255.248
+    next
+    edit net_182.156.75.232_255.255.255.252
+        set subnet 182.156.75.232 255.255.255.252
+    next
+    edit net_182.156.86.104_255.255.255.248
+        set subnet 182.156.86.104 255.255.255.248
+    next
+    edit net_14.98.4.232_255.255.255.252
+        set subnet 14.98.4.232 255.255.255.252
+    next
+    edit net_14.98.7.176_255.255.255.240
+        set subnet 14.98.7.176 255.255.255.240
+    next
+    edit net_172.16.88.128_255.255.255.128
+        set subnet 172.16.88.128 255.255.255.128
+    next
+    edit net_172.16.88.0_255.255.255.128
+        set subnet 172.16.88.0 255.255.255.128
+    next
+    edit net_172.16.80.0_255.255.240.0
+        set subnet 172.16.80.0 255.255.240.0
+    next
+    edit net_172.16.92.0_255.255.254.0
+        set subnet 172.16.92.0 255.255.254.0
+    next
+    edit net_172.16.89.128_255.255.255.128
+        set subnet 172.16.89.128 255.255.255.128
+    next
+    edit net_91.107.70.160_255.255.255.224
+        set subnet 91.107.70.160 255.255.255.224
+    next
+    edit net_95.181.193.160_255.255.255.224
+        set subnet 95.181.193.160 255.255.255.224
+    next
+    edit net_172.30.0.0_255.255.255.0
+        set subnet 172.30.0.0 255.255.255.0
+    next
+    edit net_172.31.0.0_255.255.255.0
+        set subnet 172.31.0.0 255.255.255.0
+    next
+    edit net_172.18.2.0_255.255.255.0
+        set subnet 172.18.2.0 255.255.255.0
+    next
+    edit net_172.18.3.0_255.255.255.0
+        set subnet 172.18.3.0 255.255.255.0
+    next
+    edit net_172.16.111.0_255.255.255.0
+        set subnet 172.16.111.0 255.255.255.0
+    next
+    edit net_195.58.13.228_255.255.255.252
+        set subnet 195.58.13.228 255.255.255.252
+    next
+    edit host_185.98.85.241
+        set subnet 185.98.85.241 255.255.255.255
+    next
+    edit host_185.98.85.245
+        set subnet 185.98.85.245 255.255.255.255
+    next
+    edit host_104.17.64.4
+        set subnet 104.17.64.4 255.255.255.255
+    next
+    edit host_209.197.3.15
+        set subnet 209.197.3.15 255.255.255.255
+    next
+    edit host_64.233.162.113
+        set subnet 64.233.162.113 255.255.255.255
+    next
+    edit host_209.197.3.24
+        set subnet 209.197.3.24 255.255.255.255
+    next
+    edit host_64.233.162.139
+        set subnet 64.233.162.139 255.255.255.255
+    next
+    edit host_64.233.162.138
+        set subnet 64.233.162.138 255.255.255.255
+    next
+    edit host_64.233.162.101
+        set subnet 64.233.162.101 255.255.255.255
+    next
+    edit net_35.190.247.0_255.255.255.0
+        set subnet 35.190.247.0 255.255.255.0
+    next
+    edit net_35.191.0.0_255.255.0.0
+        set subnet 35.191.0.0 255.255.0.0
+    next
+    edit net_64.233.160.0_255.255.224.0
+        set subnet 64.233.160.0 255.255.224.0
+    next
+    edit net_66.102.0.0_255.255.240.0
+        set subnet 66.102.0.0 255.255.240.0
+    next
+    edit net_66.249.80.0_255.255.240.0
+        set subnet 66.249.80.0 255.255.240.0
+    next
+    edit net_72.14.192.0_255.255.192.0
+        set subnet 72.14.192.0 255.255.192.0
+    next
+    edit net_74.125.0.0_255.255.0.0
+        set subnet 74.125.0.0 255.255.0.0
+    next
+    edit net_108.177.8.0_255.255.248.0
+        set subnet 108.177.8.0 255.255.248.0
+    next
+    edit net_108.177.96.0_255.255.224.0
+        set subnet 108.177.96.0 255.255.224.0
+    next
+    edit net_130.211.0.0_255.255.252.0
+        set subnet 130.211.0.0 255.255.252.0
+    next
+    edit net_172.217.0.0_255.255.224.0
+        set subnet 172.217.0.0 255.255.224.0
+    next
+    edit net_172.217.32.0_255.255.240.0
+        set subnet 172.217.32.0 255.255.240.0
+    next
+    edit net_172.217.128.0_255.255.224.0
+        set subnet 172.217.128.0 255.255.224.0
+    next
+    edit net_172.217.160.0_255.255.240.0
+        set subnet 172.217.160.0 255.255.240.0
+    next
+    edit net_172.217.192.0_255.255.224.0
+        set subnet 172.217.192.0 255.255.224.0
+    next
+    edit net_173.194.0.0_255.255.0.0
+        set subnet 173.194.0.0 255.255.0.0
+    next
+    edit net_209.85.128.0_255.255.128.0
+        set subnet 209.85.128.0 255.255.128.0
+    next
+    edit net_216.239.32.0_255.255.224.0
+        set subnet 216.239.32.0 255.255.224.0
+    next
+    edit net_216.58.192.0_255.255.224.0
+        set subnet 216.58.192.0 255.255.224.0
+    next
+    edit host_91.218.248.1
+        set subnet 91.218.248.1 255.255.255.255
+    next
+    edit host_77.222.130.59
+        set subnet 77.222.130.59 255.255.255.255
+    next
+    edit host_212.115.239.206
+        set subnet 212.115.239.206 255.255.255.255
+    next
+    edit host_91.218.249.170
+        set subnet 91.218.249.170 255.255.255.255
+    next
+    edit host_134.249.152.201
+        set subnet 134.249.152.201 255.255.255.255
+    next
+    edit host_185.135.172.51
+        set subnet 185.135.172.51 255.255.255.255
+    next
+    edit host_185.135.172.52
+        set subnet 185.135.172.52 255.255.255.255
+    next
+    edit host_185.135.172.53
+        set subnet 185.135.172.53 255.255.255.255
+    next
+    edit host_185.135.172.54
+        set subnet 185.135.172.54 255.255.255.255
+    next
+    edit host_88.87.70.159
+        set subnet 88.87.70.159 255.255.255.255
+    next
+    edit host_159.89.167.182
+        set subnet 159.89.167.182 255.255.255.255
+    next
+    edit host_174.138.123.88
+        set subnet 174.138.123.88 255.255.255.255
+    next
+    edit host_180.151.16.65
+        set subnet 180.151.16.65 255.255.255.255
+    next
+    edit host_174.138.121.227
+        set subnet 174.138.121.227 255.255.255.255
+    next
+    edit host_74.201.84.80
+        set subnet 74.201.84.80 255.255.255.255
+    next
+    edit host_74.201.152.59
+        set subnet 74.201.152.59 255.255.255.255
+    next
+    edit host_74.201.154.214
+        set subnet 74.201.154.214 255.255.255.255
+    next
+    edit host_165.254.168.201
+        set subnet 165.254.168.201 255.255.255.255
+    next
+    edit host_216.52.72.54
+        set subnet 216.52.72.54 255.255.255.255
+    next
+    edit host_165.254.172.54
+        set subnet 165.254.172.54 255.255.255.255
+    next
+    edit host_204.141.32.54
+        set subnet 204.141.32.54 255.255.255.255
+    next
+    edit host_8.40.222.54
+        set subnet 8.40.222.54 255.255.255.255
+    next
+    edit host_216.52.72.1
+        set subnet 216.52.72.1 255.255.255.255
+    next
+    edit host_204.141.32.1
+        set subnet 204.141.32.1 255.255.255.255
+    next
+    edit host_8.40.222.1
+        set subnet 8.40.222.1 255.255.255.255
+    next
+    edit host_135.84.80.131
+        set subnet 135.84.80.131 255.255.255.255
+    next
+    edit host_135.84.82.131
+        set subnet 135.84.82.131 255.255.255.255
+    next
+    edit host_8.39.54.54
+        set subnet 8.39.54.54 255.255.255.255
+    next
+    edit host_204.141.42.54
+        set subnet 204.141.42.54 255.255.255.255
+    next
+    edit host_136.143.187.53
+        set subnet 136.143.187.53 255.255.255.255
+    next
+    edit host_136.143.186.53
+        set subnet 136.143.186.53 255.255.255.255
+    next
+    edit host_31.186.226.139
+        set subnet 31.186.226.139 255.255.255.255
+    next
+    edit host_87.252.213.139
+        set subnet 87.252.213.139 255.255.255.255
+    next
+    edit host_185.20.209.139
+        set subnet 185.20.209.139 255.255.255.255
+    next
+    edit host_84.207.209.139
+        set subnet 84.207.209.139 255.255.255.255
+    next
+    edit host_176.118.29.208
+        set subnet 176.118.29.208 255.255.255.255
+    next
+    edit host_172.16.44.5
+        set subnet 172.16.44.5 255.255.255.255
+    next
+    edit host_172.16.47.100
+        set subnet 172.16.47.100 255.255.255.255
+    next
+    edit host_172.16.44.2
+        set subnet 172.16.44.2 255.255.255.255
+    next
+    edit host_172.16.44.3
+        set subnet 172.16.44.3 255.255.255.255
+    next
+    edit host_172.16.75.20
+        set subnet 172.16.75.20 255.255.255.255
+    next
+    edit host_172.16.73.36
+        set subnet 172.16.73.36 255.255.255.255
+    next
+    edit host_172.16.72.112
+        set subnet 172.16.72.112 255.255.255.255
+    next
+    edit host_172.16.73.8
+        set subnet 172.16.73.8 255.255.255.255
+    next
+    edit host_172.16.74.90
+        set subnet 172.16.74.90 255.255.255.255
+    next
+    edit host_172.16.72.251
+        set subnet 172.16.72.251 255.255.255.255
+    next
+    edit host_172.16.72.121
+        set subnet 172.16.72.121 255.255.255.255
+    next
+    edit host_172.16.56.146
+        set subnet 172.16.56.146 255.255.255.255
+    next
+    edit host_172.16.72.105
+        set subnet 172.16.72.105 255.255.255.255
+    next
+    edit net_87.117.164.208_255.255.255.240
+        set subnet 87.117.164.208 255.255.255.240
+    next
+    edit host_94.180.246.100
+        set subnet 94.180.246.100 255.255.255.255
+    next
+    edit net_95.161.218.244_255.255.255.252
+        set subnet 95.161.218.244 255.255.255.252
+    next
+    edit net_46.164.154.176_255.255.255.240
+        set subnet 46.164.154.176 255.255.255.240
+    next
+    edit net_172.16.44.0_255.255.255.192
+        set subnet 172.16.44.0 255.255.255.192
+    next
+    edit net_172.16.44.0_255.255.252.0
+        set subnet 172.16.44.0 255.255.252.0
+    next
+    edit net_94.100.218.0_255.255.255.0
+        set subnet 94.100.218.0 255.255.255.0
+    next
+    edit net_46.29.8.0_255.255.248.0
+        set subnet 46.29.8.0 255.255.248.0
+    next
+    edit net_80.255.133.8_255.255.255.252
+        set subnet 80.255.133.8 255.255.255.252
+    next
+    edit net_195.218.186.160_255.255.255.240
+        set subnet 195.218.186.160 255.255.255.240
+    next
+    edit net_89.175.161.12_255.255.255.252
+        set subnet 89.175.161.12 255.255.255.252
+    next
+    edit net_89.175.162.112_255.255.255.248
+        set subnet 89.175.162.112 255.255.255.248
+    next
+    edit net_85.235.184.140_255.255.255.252
+        set subnet 85.235.184.140 255.255.255.252
+    next
+    edit net_89.175.187.16_255.255.255.240
+        set subnet 89.175.187.16 255.255.255.240
+    next
+    edit net_193.34.10.216_255.255.255.248
+        set subnet 193.34.10.216 255.255.255.248
+    next
+    edit net_78.31.79.24_255.255.255.248
+        set subnet 78.31.79.24 255.255.255.248
+    next
+    edit net_37.28.184.0_255.255.255.0
+        set subnet 37.28.184.0 255.255.255.0
+    next
+    edit net_91.192.201.16_255.255.255.240
+        set subnet 91.192.201.16 255.255.255.240
+    next
+    edit net_193.108.226.32_255.255.255.240
+        set subnet 193.108.226.32 255.255.255.240
+    next
+    edit net_91.192.201.16_255.255.255.248
+        set subnet 91.192.201.16 255.255.255.248
+    next
+    edit host_82.135.28.135
+        set subnet 82.135.28.135 255.255.255.255
+    next
+    edit net_82.135.110.240_255.255.255.248
+        set subnet 82.135.110.240 255.255.255.248
+    next
+    edit net_195.82.144.32_255.255.255.224
+        set subnet 195.82.144.32 255.255.255.224
+    next
+    edit net_77.66.152.0_255.255.248.0
+        set subnet 77.66.152.0 255.255.248.0
+    next
+    edit host_176.213.137.205
+        set subnet 176.213.137.205 255.255.255.255
+    next
+    edit net_217.79.22.192_255.255.255.192
+        set subnet 217.79.22.192 255.255.255.192
+    next
+    edit net_194.190.137.0_255.255.255.0
+        set subnet 194.190.137.0 255.255.255.0
+    next
+    edit net_194.190.109.0_255.255.255.0
+        set subnet 194.190.109.0 255.255.255.0
+    next
+    edit net_84.52.92.176_255.255.255.240
+        set subnet 84.52.92.176 255.255.255.240
+    next
+    edit host_62.32.74.18
+        set subnet 62.32.74.18 255.255.255.255
+    next
+    edit host_91.212.47.38
+        set subnet 91.212.47.38 255.255.255.255
+    next
+    edit host_78.107.191.77
+        set subnet 78.107.191.77 255.255.255.255
+    next
+    edit net_81.211.35.44_255.255.255.252
+        set subnet 81.211.35.44 255.255.255.252
+    next
+    edit net_172.18.1.0_255.255.255.0
+        set subnet 172.18.1.0 255.255.255.0
+    next
+    edit net_172.16.17.64_255.255.255.224
+        set subnet 172.16.17.64 255.255.255.224
+    next
+    edit net_172.16.21.0_255.255.255.128
+        set subnet 172.16.21.0 255.255.255.128
+    next
+    edit net_172.16.22.0_255.255.255.128
+        set subnet 172.16.22.0 255.255.255.128
+    next
+    edit host_172.16.16.193
+        set subnet 172.16.16.193 255.255.255.255
+    next
+    edit host_172.16.16.195
+        set subnet 172.16.16.195 255.255.255.255
+    next
+    edit host_172.16.23.24
+        set subnet 172.16.23.24 255.255.255.255
+    next
+    edit host_172.16.71.47
+        set subnet 172.16.71.47 255.255.255.255
+    next
+    edit net_172.16.65.64_255.255.255.224
+        set subnet 172.16.65.64 255.255.255.224
+    next
+    edit net_172.16.69.0_255.255.255.0
+        set subnet 172.16.69.0 255.255.255.0
+    next
+    edit net_172.16.70.0_255.255.255.128
+        set subnet 172.16.70.0 255.255.255.128
+    next
+    edit net_172.16.66.0_255.255.255.0
+        set subnet 172.16.66.0 255.255.255.0
+    next
+    edit host_172.16.88.7
+        set subnet 172.16.88.7 255.255.255.255
+    next
+    edit host_172.16.88.11
+        set subnet 172.16.88.11 255.255.255.255
+    next
+    edit host_172.16.88.5
+        set subnet 172.16.88.5 255.255.255.255
+    next
+    edit host_172.16.88.10
+        set subnet 172.16.88.10 255.255.255.255
+    next
+    edit host_172.16.88.12
+        set subnet 172.16.88.12 255.255.255.255
+    next
+    edit host_172.16.88.14
+        set subnet 172.16.88.14 255.255.255.255
+    next
+    edit host_172.16.88.6
+        set subnet 172.16.88.6 255.255.255.255
+    next
+    edit host_172.16.89.68
+        set subnet 172.16.89.68 255.255.255.255
+    next
+    edit host_172.16.88.15
+        set subnet 172.16.88.15 255.255.255.255
+    next
+    edit host_172.16.89.45
+        set subnet 172.16.89.45 255.255.255.255
+    next
+    edit host_172.16.88.230
+        set subnet 172.16.88.230 255.255.255.255
+    next
+    edit host_172.16.88.9
+        set subnet 172.16.88.9 255.255.255.255
+    next
+    edit host_172.16.88.16
+        set subnet 172.16.88.16 255.255.255.255
+    next
+    edit host_172.16.94.5
+        set subnet 172.16.94.5 255.255.255.255
+    next
+    edit host_172.16.94.6
+        set subnet 172.16.94.6 255.255.255.255
+    next
+    edit host_172.16.89.41
+        set subnet 172.16.89.41 255.255.255.255
+    next
+    edit host_172.16.89.6
+        set subnet 172.16.89.6 255.255.255.255
+    next
+    edit host_172.16.110.153
+        set subnet 172.16.110.153 255.255.255.255
+    next
+    edit host_172.16.110.152
+        set subnet 172.16.110.152 255.255.255.255
+    next
+    edit host_172.16.110.50
+        set subnet 172.16.110.50 255.255.255.255
+    next
+    edit host_172.16.110.51
+        set subnet 172.16.110.51 255.255.255.255
+    next
+    edit host_172.16.110.53
+        set subnet 172.16.110.53 255.255.255.255
+    next
+    edit host_172.16.111.15
+        set subnet 172.16.111.15 255.255.255.255
+    next
+    edit host_172.16.111.10
+        set subnet 172.16.111.10 255.255.255.255
+    next
+    edit host_172.16.110.6
+        set subnet 172.16.110.6 255.255.255.255
+    next
+    edit host_172.16.110.7
+        set subnet 172.16.110.7 255.255.255.255
+    next
+    edit host_172.18.2.9
+        set subnet 172.18.2.9 255.255.255.255
+    next
+    edit host_172.18.2.7
+        set subnet 172.18.2.7 255.255.255.255
+    next
+    edit host_172.18.2.5
+        set subnet 172.18.2.5 255.255.255.255
+    next
+    edit host_172.18.2.6
+        set subnet 172.18.2.6 255.255.255.255
+    next
+    edit host_172.16.110.28
+        set subnet 172.16.110.28 255.255.255.255
+    next
+    edit host_172.18.2.12
+        set subnet 172.18.2.12 255.255.255.255
+    next
+    edit host_172.16.110.11
+        set subnet 172.16.110.11 255.255.255.255
+    next
+    edit host_172.16.110.23
+        set subnet 172.16.110.23 255.255.255.255
+    next
+    edit host_172.16.110.24
+        set subnet 172.16.110.24 255.255.255.255
+    next
+    edit host_172.16.110.14
+        set subnet 172.16.110.14 255.255.255.255
+    next
+    edit host_172.16.110.10
+        set subnet 172.16.110.10 255.255.255.255
+    next
+    edit host_172.16.111.13
+        set subnet 172.16.111.13 255.255.255.255
+    next
+    edit host_172.16.111.6
+        set subnet 172.16.111.6 255.255.255.255
+    next
+    edit host_172.16.110.15
+        set subnet 172.16.110.15 255.255.255.255
+    next
+    edit host_172.16.110.34
+        set subnet 172.16.110.34 255.255.255.255
+    next
+    edit host_172.16.111.54
+        set subnet 172.16.111.54 255.255.255.255
+    next
+    edit host_172.16.111.8
+        set subnet 172.16.111.8 255.255.255.255
+    next
+    edit host_172.16.111.12
+        set subnet 172.16.111.12 255.255.255.255
+    next
+    edit host_172.16.111.9
+        set subnet 172.16.111.9 255.255.255.255
+    next
+    edit host_172.16.110.59
+        set subnet 172.16.110.59 255.255.255.255
+    next
+    edit host_172.16.110.60
+        set subnet 172.16.110.60 255.255.255.255
+    next
+    edit host_172.16.110.26
+        set subnet 172.16.110.26 255.255.255.255
+    next
+    edit host_172.16.110.27
+        set subnet 172.16.110.27 255.255.255.255
+    next
+    edit host_172.16.111.55
+        set subnet 172.16.111.55 255.255.255.255
+    next
+    edit host_172.16.110.16
+        set subnet 172.16.110.16 255.255.255.255
+    next
+    edit host_172.16.110.17
+        set subnet 172.16.110.17 255.255.255.255
+    next
+    edit host_172.16.110.58
+        set subnet 172.16.110.58 255.255.255.255
+    next
+    edit host_172.16.110.29
+        set subnet 172.16.110.29 255.255.255.255
+    next
+    edit host_172.16.110.30
+        set subnet 172.16.110.30 255.255.255.255
+    next
+    edit host_172.16.110.31
+        set subnet 172.16.110.31 255.255.255.255
+    next
+    edit host_172.16.110.32
+        set subnet 172.16.110.32 255.255.255.255
+    next
+    edit host_172.16.110.35
+        set subnet 172.16.110.35 255.255.255.255
+    next
+    edit host_172.16.111.56
+        set subnet 172.16.111.56 255.255.255.255
+    next
+    edit host_172.16.111.53
+        set subnet 172.16.111.53 255.255.255.255
+    next
+    edit host_172.16.111.51
+        set subnet 172.16.111.51 255.255.255.255
+    next
+    edit host_172.16.110.5
+        set subnet 172.16.110.5 255.255.255.255
+    next
+    edit host_172.16.110.19
+        set subnet 172.16.110.19 255.255.255.255
+    next
+    edit host_172.16.80.5
+        set subnet 172.16.80.5 255.255.255.255
+    next
+    edit host_172.16.80.6
+        set subnet 172.16.80.6 255.255.255.255
+    next
+    edit host_172.16.110.234
+        set subnet 172.16.110.234 255.255.255.255
+    next
+    edit host_172.16.110.237
+        set subnet 172.16.110.237 255.255.255.255
+    next
+    edit host_172.16.110.240
+        set subnet 172.16.110.240 255.255.255.255
+    next
+    edit host_172.16.110.236
+        set subnet 172.16.110.236 255.255.255.255
+    next
+    edit host_172.16.110.233
+        set subnet 172.16.110.233 255.255.255.255
+    next
+    edit host_172.16.110.235
+        set subnet 172.16.110.235 255.255.255.255
+    next
+    edit host_172.16.110.238
+        set subnet 172.16.110.238 255.255.255.255
+    next
+    edit host_172.16.110.242
+        set subnet 172.16.110.242 255.255.255.255
+    next
+    edit host_172.16.110.243
+        set subnet 172.16.110.243 255.255.255.255
+    next
+    edit host_172.16.110.230
+        set subnet 172.16.110.230 255.255.255.255
+    next
+    edit host_172.16.110.231
+        set subnet 172.16.110.231 255.255.255.255
+    next
+    edit host_172.16.111.232
+        set subnet 172.16.111.232 255.255.255.255
+    next
+    edit host_172.16.44.6
+        set subnet 172.16.44.6 255.255.255.255
+    next
+    edit host_172.16.44.7
+        set subnet 172.16.44.7 255.255.255.255
+    next
+    edit host_172.16.47.5
+        set subnet 172.16.47.5 255.255.255.255
+    next
+    edit host_172.16.82.130
+        set subnet 172.16.82.130 255.255.255.255
+    next
+    edit host_172.16.16.8
+        set subnet 172.16.16.8 255.255.255.255
+    next
+    edit host_172.16.16.5
+        set subnet 172.16.16.5 255.255.255.255
+    next
+    edit host_172.16.16.13
+        set subnet 172.16.16.13 255.255.255.255
+    next
+    edit host_172.16.110.164
+        set subnet 172.16.110.164 255.255.255.255
+    next
+    edit host_172.16.16.10
+        set subnet 172.16.16.10 255.255.255.255
+    next
+    edit host_172.16.16.147
+        set subnet 172.16.16.147 255.255.255.255
+    next
+    edit host_172.16.16.26
+        set subnet 172.16.16.26 255.255.255.255
+    next
+    edit host_172.16.16.18
+        set subnet 172.16.16.18 255.255.255.255
+    next
+    edit host_172.16.16.48
+        set subnet 172.16.16.48 255.255.255.255
+    next
+    edit host_172.16.16.54
+        set subnet 172.16.16.54 255.255.255.255
+    next
+    edit host_172.16.16.45
+        set subnet 172.16.16.45 255.255.255.255
+    next
+    edit host_172.16.16.30
+        set subnet 172.16.16.30 255.255.255.255
+    next
+    edit host_172.16.16.25
+        set subnet 172.16.16.25 255.255.255.255
+    next
+    edit host_172.16.16.9
+        set subnet 172.16.16.9 255.255.255.255
+    next
+    edit host_172.16.16.170
+        set subnet 172.16.16.170 255.255.255.255
+    next
+    edit host_172.16.16.24
+        set subnet 172.16.16.24 255.255.255.255
+    next
+    edit host_172.16.16.34
+        set subnet 172.16.16.34 255.255.255.255
+    next
+    edit host_172.16.16.64
+        set subnet 172.16.16.64 255.255.255.255
+    next
+    edit host_172.16.16.12
+        set subnet 172.16.16.12 255.255.255.255
+    next
+    edit host_172.16.16.14
+        set subnet 172.16.16.14 255.255.255.255
+    next
+    edit host_172.16.17.68
+        set subnet 172.16.17.68 255.255.255.255
+    next
+    edit host_172.16.16.57
+        set subnet 172.16.16.57 255.255.255.255
+    next
+    edit host_172.16.16.230
+        set subnet 172.16.16.230 255.255.255.255
+    next
+    edit host_172.16.17.143
+        set subnet 172.16.17.143 255.255.255.255
+    next
+    edit host_172.16.17.144
+        set subnet 172.16.17.144 255.255.255.255
+    next
+    edit host_172.16.28.13
+        set subnet 172.16.28.13 255.255.255.255
+    next
+    edit host_172.16.28.14
+        set subnet 172.16.28.14 255.255.255.255
+    next
+    edit host_172.16.28.15
+        set subnet 172.16.28.15 255.255.255.255
+    next
+    edit host_172.16.28.8
+        set subnet 172.16.28.8 255.255.255.255
+    next
+    edit host_172.16.28.9
+        set subnet 172.16.28.9 255.255.255.255
+    next
+    edit host_172.16.28.7
+        set subnet 172.16.28.7 255.255.255.255
+    next
+    edit host_172.16.28.6
+        set subnet 172.16.28.6 255.255.255.255
+    next
+    edit host_172.16.16.17
+        set subnet 172.16.16.17 255.255.255.255
+    next
+    edit host_172.16.16.49
+        set subnet 172.16.16.49 255.255.255.255
+    next
+    edit host_172.16.16.23
+        set subnet 172.16.16.23 255.255.255.255
+    next
+    edit host_172.16.16.16
+        set subnet 172.16.16.16 255.255.255.255
+    next
+    edit host_172.18.1.9
+        set subnet 172.18.1.9 255.255.255.255
+    next
+    edit host_172.18.1.5
+        set subnet 172.18.1.5 255.255.255.255
+    next
+    edit host_172.16.23.135
+        set subnet 172.16.23.135 255.255.255.255
+    next
+    edit host_172.16.23.136
+        set subnet 172.16.23.136 255.255.255.255
+    next
+    edit host_172.16.23.133
+        set subnet 172.16.23.133 255.255.255.255
+    next
+    edit host_172.16.16.28
+        set subnet 172.16.16.28 255.255.255.255
+    next
+    edit host_172.16.28.5
+        set subnet 172.16.28.5 255.255.255.255
+    next
+    edit host_172.16.16.59
+        set subnet 172.16.16.59 255.255.255.255
+    next
+    edit host_172.16.17.134
+        set subnet 172.16.17.134 255.255.255.255
+    next
+    edit host_172.16.16.194
+        set subnet 172.16.16.194 255.255.255.255
+    next
+    edit host_172.16.16.7
+        set subnet 172.16.16.7 255.255.255.255
+    next
+    edit host_172.16.17.14
+        set subnet 172.16.17.14 255.255.255.255
+    next
+    edit host_172.16.17.9
+        set subnet 172.16.17.9 255.255.255.255
+    next
+    edit host_172.16.17.8
+        set subnet 172.16.17.8 255.255.255.255
+    next
+    edit host_172.16.16.32
+        set subnet 172.16.16.32 255.255.255.255
+    next
+    edit host_172.16.64.20
+        set subnet 172.16.64.20 255.255.255.255
+    next
+    edit host_172.16.64.24
+        set subnet 172.16.64.24 255.255.255.255
+    next
+    edit host_172.16.64.50
+        set subnet 172.16.64.50 255.255.255.255
+    next
+    edit host_172.16.64.55
+        set subnet 172.16.64.55 255.255.255.255
+    next
+    edit host_172.16.64.4
+        set subnet 172.16.64.4 255.255.255.255
+    next
+    edit host_172.16.64.5
+        set subnet 172.16.64.5 255.255.255.255
+    next
+    edit host_172.16.64.30
+        set subnet 172.16.64.30 255.255.255.255
+    next
+    edit host_172.16.64.35
+        set subnet 172.16.64.35 255.255.255.255
+    next
+    edit host_172.16.64.19
+        set subnet 172.16.64.19 255.255.255.255
+    next
+    edit host_172.16.64.40
+        set subnet 172.16.64.40 255.255.255.255
+    next
+    edit host_172.16.70.19
+        set subnet 172.16.70.19 255.255.255.255
+    next
+    edit host_172.16.64.34
+        set subnet 172.16.64.34 255.255.255.255
+    next
+    edit host_172.16.64.14
+        set subnet 172.16.64.14 255.255.255.255
+    next
+    edit host_172.16.65.68
+        set subnet 172.16.65.68 255.255.255.255
+    next
+    edit host_172.16.64.6
+        set subnet 172.16.64.6 255.255.255.255
+    next
+    edit host_172.16.64.10
+        set subnet 172.16.64.10 255.255.255.255
+    next
+    edit host_172.16.64.28
+        set subnet 172.16.64.28 255.255.255.255
+    next
+    edit host_172.16.65.45
+        set subnet 172.16.65.45 255.255.255.255
+    next
+    edit host_172.16.64.230
+        set subnet 172.16.64.230 255.255.255.255
+    next
+    edit host_172.16.70.18
+        set subnet 172.16.70.18 255.255.255.255
+    next
+    edit host_172.16.70.20
+        set subnet 172.16.70.20 255.255.255.255
+    next
+    edit host_172.16.76.5
+        set subnet 172.16.76.5 255.255.255.255
+    next
+    edit host_172.16.76.6
+        set subnet 172.16.76.6 255.255.255.255
+    next
+    edit host_172.16.64.15
+        set subnet 172.16.64.15 255.255.255.255
+    next
+    edit host_172.16.64.17
+        set subnet 172.16.64.17 255.255.255.255
+    next
+    edit host_172.16.64.8
+        set subnet 172.16.64.8 255.255.255.255
+    next
+    edit host_172.16.64.11
+        set subnet 172.16.64.11 255.255.255.255
+    next
+    edit host_172.16.64.12
+        set subnet 172.16.64.12 255.255.255.255
+    next
+    edit host_172.16.64.23
+        set subnet 172.16.64.23 255.255.255.255
+    next
+    edit host_172.16.76.4
+        set subnet 172.16.76.4 255.255.255.255
+    next
+    edit host_172.16.64.41
+        set subnet 172.16.64.41 255.255.255.255
+    next
+    edit host_172.16.64.7
+        set subnet 172.16.64.7 255.255.255.255
+    next
+    edit host_172.16.65.6
+        set subnet 172.16.65.6 255.255.255.255
+    next
+    edit host_172.16.56.31
+        set subnet 172.16.56.31 255.255.255.255
+    next
+    edit host_172.16.56.9
+        set subnet 172.16.56.9 255.255.255.255
+    next
+    edit host_172.16.56.17
+        set subnet 172.16.56.17 255.255.255.255
+    next
+    edit host_172.16.56.15
+        set subnet 172.16.56.15 255.255.255.255
+    next
+    edit host_172.16.56.30
+        set subnet 172.16.56.30 255.255.255.255
+    next
+    edit host_172.16.60.78
+        set subnet 172.16.60.78 255.255.255.255
+    next
+    edit host_172.16.56.16
+        set subnet 172.16.56.16 255.255.255.255
+    next
+    edit host_172.16.56.14
+        set subnet 172.16.56.14 255.255.255.255
+    next
+    edit host_172.16.57.68
+        set subnet 172.16.57.68 255.255.255.255
+    next
+    edit host_172.16.56.6
+        set subnet 172.16.56.6 255.255.255.255
+    next
+    edit host_172.16.56.26
+        set subnet 172.16.56.26 255.255.255.255
+    next
+    edit host_172.16.56.23
+        set subnet 172.16.56.23 255.255.255.255
+    next
+    edit host_172.16.56.159
+        set subnet 172.16.56.159 255.255.255.255
+    next
+    edit host_172.16.62.61
+        set subnet 172.16.62.61 255.255.255.255
+    next
+    edit host_172.16.56.29
+        set subnet 172.16.56.29 255.255.255.255
+    next
+    edit host_172.16.56.24
+        set subnet 172.16.56.24 255.255.255.255
+    next
+    edit host_172.16.62.5
+        set subnet 172.16.62.5 255.255.255.255
+    next
+    edit host_172.16.57.5
+        set subnet 172.16.57.5 255.255.255.255
+    next
+    edit host_172.16.57.6
+        set subnet 172.16.57.6 255.255.255.255
+    next
+    edit host_172.17.15.15
+        set subnet 172.17.15.15 255.255.255.255
+    next
+    edit host_172.18.3.5
+        set subnet 172.18.3.5 255.255.255.255
+    next
+    edit host_172.18.3.6
+        set subnet 172.18.3.6 255.255.255.255
+    next
+    edit host_172.18.3.7
+        set subnet 172.18.3.7 255.255.255.255
+    next
+    edit host_172.18.3.8
+        set subnet 172.18.3.8 255.255.255.255
+    next
+    edit host_172.18.3.9
+        set subnet 172.18.3.9 255.255.255.255
+    next
+    edit host_172.18.3.10
+        set subnet 172.18.3.10 255.255.255.255
+    next
+    edit host_172.18.1.13
+        set subnet 172.18.1.13 255.255.255.255
+    next
+    edit host_172.16.56.13
+        set subnet 172.16.56.13 255.255.255.255
+    next
+    edit host_172.16.63.13
+        set subnet 172.16.63.13 255.255.255.255
+    next
+    edit host_172.16.16.56
+        set subnet 172.16.16.56 255.255.255.255
+    next
+    edit host_172.16.64.32
+        set subnet 172.16.64.32 255.255.255.255
+    next
+    edit host_172.16.88.4
+        set subnet 172.16.88.4 255.255.255.255
+    next
+    edit host_172.16.16.73
+        set subnet 172.16.16.73 255.255.255.255
+    next
+    edit host_172.16.65.134
+        set subnet 172.16.65.134 255.255.255.255
+    next
+    edit host_172.16.17.5
+        set subnet 172.16.17.5 255.255.255.255
+    next
+    edit host_172.16.17.6
+        set subnet 172.16.17.6 255.255.255.255
+    next
+    edit host_172.16.65.5
+        set subnet 172.16.65.5 255.255.255.255
+    next
+    edit host_172.16.89.5
+        set subnet 172.16.89.5 255.255.255.255
+    next
+    edit net_172.16.17.128_255.255.255.192
+        set subnet 172.16.17.128 255.255.255.192
+    next
+    edit net_172.16.56.128_255.255.255.128
+        set subnet 172.16.56.128 255.255.255.128
+    next
+    edit net_172.16.56.0_255.255.255.128
+        set subnet 172.16.56.0 255.255.255.128
+    next
+    edit net_172.16.56.0_255.255.248.0
+        set subnet 172.16.56.0 255.255.248.0
+    next
+    edit net_172.16.57.128_255.255.255.128
+        set subnet 172.16.57.128 255.255.255.128
+    next
+    edit net_172.16.17.192_255.255.255.192
+        set subnet 172.16.17.192 255.255.255.192
+    next
+    edit host_172.16.62.23
+        set subnet 172.16.62.23 255.255.255.255
+    next
+end
+config firewall addrgrp
+    edit GROUP-SERVER-MSK-ADM
+        set member "host_172.16.16.15"
+    next
+    edit GROUP-SERVER-RZN-ADM-11
+        set member "host_172.16.64.13"
+    next
+    edit GROUP-HOST-KOVALEVSN-NB
+        set member "host_172.17.250.21" "host_172.17.251.21" "host_172.17.252.21"
+    next
+    edit GROUP-SERVER-MSK-PRIME-01
+        set member "host_172.16.17.11"
+    next
+    edit GROUP-SERVER-MSK-NIXADM-01
+        set member "host_172.16.17.12"
+    next
+    edit GROUP-ADMIN-MANAGMENT-RUS
+        set member "GROUP-SERVER-MSK-ADM" "GROUP-SERVER-RZN-ADM-11" "GROUP-HOST-KOVALEVSN-NB" "GROUP-SERVER-MSK-PRIME-01" "GROUP-SERVER-MSK-NIXADM-01"
+    next
+    edit GROUP-SERVER-SLV-DEV-11
+        set member "host_172.16.61.5"
+    next
+    edit GROUP-HOST-HARISOFF
+        set member "host_172.16.61.10"
+    next
+    edit GROUP-ADMIN-MANAGMENT-UA
+        set member "GROUP-SERVER-SLV-DEV-11" "GROUP-HOST-HARISOFF"
+    next
+    edit GROUP-RZN-PRINTER-NETWORK
+        set member "net_172.16.71.0_255.255.255.0"
+    next
+    edit GROUP-MSK-PRINTER-NETWORK
+        set member "net_172.16.23.0_255.255.255.128"
+    next
+    edit GROUP-SLV-PRINTER-NETWORK
+        set member "net_172.16.57.64_255.255.255.224"
+    next
+    edit GROUP-BLR-PLANT-PRINTER-NETWORK
+        set member "net_172.16.91.0_255.255.255.128"
+    next
+    edit GROUP-ALL-PRINTER-NETWORK
+        set member "GROUP-RZN-PRINTER-NETWORK" "GROUP-MSK-PRINTER-NETWORK" "GROUP-SLV-PRINTER-NETWORK" "GROUP-BLR-PLANT-PRINTER-NETWORK"
+    next
+    edit GROUP-MSK-SIEM-NETWORK
+        set member "net_172.16.23.128_255.255.255.240"
+    next
+    edit GROUP-ALL-SIEM-NETWORK
+        set member "GROUP-MSK-SIEM-NETWORK"
+    next
+    edit GROUP-MSK-USERS-NETWORK
+        set member "net_172.16.24.0_255.255.252.0"
+    next
+    edit GROUP-RZN-USERS-NETWORK
+        set member "net_172.16.72.0_255.255.252.0"
+    next
+    edit GROUP-SLV-USERS-NETWORK
+        set member "net_172.16.60.0_255.255.254.0"
+    next
+    edit GROUP-KIEV-USERS-NETWORK
+        set member "net_172.16.46.0_255.255.255.0"
+    next
+    edit GROUP-REGION-SPB-USERS-NETWORK
+        set member "net_172.17.15.0_255.255.255.0"
+    next
+    edit GROUP-REGION-VLG-USERS-NETWORK
+        set member "net_172.17.250.0_255.255.255.0" "net_172.17.251.0_255.255.255.0" "net_172.17.252.0_255.255.255.0"
+    next
+    edit GROUP-REGION-ALL-USERS-NETWORK
+        set member "net_172.17.0.0_255.255.0.0" "GROUP-MSK-USERS-NETWORK" "GROUP-RZN-USERS-NETWORK" "GROUP-SLV-USERS-NETWORK" "GROUP-KIEV-USERS-NETWORK" "GROUP-REGION-SPB-USERS-NETWORK" "GROUP-REGION-VLG-USERS-NETWORK"
+    next
+    edit GROUP-ALL-USERS-NETWORK
+        set member "GROUP-MSK-USERS-NETWORK" "GROUP-RZN-USERS-NETWORK" "GROUP-SLV-USERS-NETWORK" "GROUP-KIEV-USERS-NETWORK" "GROUP-REGION-ALL-USERS-NETWORK"
+    next
+    edit GROUP-MSK-VOIP-NETWORK
+        set member "net_172.16.28.0_255.255.252.0"
+    next
+    edit GROUP-RZN-VOIP-NETWORK
+        set member "net_172.16.76.0_255.255.252.0"
+    next
+    edit GROUP-SLV-VOIP-NETWORK
+        set member "net_172.16.62.0_255.255.254.0"
+    next
+    edit GROUP-KIEV-VOIP-NETWORK
+        set member "net_172.16.47.0_255.255.255.0"
+    next
+    edit GROUP-BLR-PLANT-VOIP-NETWORK
+        set member "net_172.16.94.0_255.255.254.0"
+    next
+    edit GROUP-BLR-OFFICE-VOIP-NETWORK
+        set member "net_172.16.80.128_255.255.255.128"
+    next
+    edit GROUP-ASTANA-VOIP-NETWORK
+        set member "net_172.16.82.128_255.255.255.128"
+    next
+    edit GROUP-ALL-VOIP-NETWORK
+        set member "GROUP-MSK-VOIP-NETWORK" "GROUP-RZN-VOIP-NETWORK" "GROUP-SLV-VOIP-NETWORK" "GROUP-KIEV-VOIP-NETWORK" "GROUP-BLR-PLANT-VOIP-NETWORK" "GROUP-BLR-OFFICE-VOIP-NETWORK" "GROUP-ASTANA-VOIP-NETWORK"
+    next
+    edit GROUP-ALMATA-OFFICE-IP
+        set member "net_185.27.68.0_255.255.252.0" "net_95.46.232.0_255.255.248.0" "net_185.27.70.0_255.255.254.0" "host_192.168.100.100"
+    next
+    edit GROUP-ASTANA-OFFICE-IP
+        set member "net_89.218.78.44_255.255.255.252" "net_89.218.78.76_255.255.255.252" "host_185.215.161.10"
+    next
+    edit GROUP-ASTANA-OFFICE-USERS-NETWORK
+        set member "net_172.16.83.0_255.255.255.0"
+    next
+    edit GROUP-ASTANA-SKLAD-IP
+        set member "net_195.189.69.64_255.255.255.252"
+    next
+    edit GROUP-ATTACKERS-IP-VPNFILTER
+        set member "host_91.121.109.209" "host_217.12.202.40" "host_94.242.222.68" "host_82.118.242.124" "host_46.151.209.33" "host_217.79.179.14" "host_91.214.203.144" "host_95.211.198.231" "host_195.154.180.60" "host_5.149.250.54" "host_91.200.13.76" "host_94.185.80.82" "host_62.210.180.229"
+    next
+    edit GROUP-ATTACKERS-IP-TROJAN-MINER
+        set member "host_193.109.247.224"
+    next
+    edit GROUP-ATTACKERS-IP-DHARMA-BIP
+        set member "host_188.126.73.4" "host_188.162.39.14" "host_185.248.100.226" "host_77.72.83.225"
+    next
+    edit GROUP-ATTACKERS-IP-RDP-BRUTFORCE
+        set member "host_188.92.74.16" "host_185.222.201.20" "host_89.32.82.199" "host_67.169.57.222" "host_176.113.246.8" "host_185.156.177.15" "host_181.57.134.246" "host_195.114.121.254" "host_82.145.242.22" "host_185.234.218.96"
+    next
+    edit GROUP-ATTACKERS-IP-ALL
+        set member "GROUP-ATTACKERS-IP-VPNFILTER" "GROUP-ATTACKERS-IP-TROJAN-MINER" "GROUP-ATTACKERS-IP-DHARMA-BIP" "GROUP-ATTACKERS-IP-RDP-BRUTFORCE"
+    next
+    edit GROUP-BLR-OFFICE-IP
+        set member "net_182.156.75.252_255.255.255.252" "net_106.51.238.172_255.255.255.252" "net_106.51.238.176_255.255.255.248"
+    next
+    edit GROUP-BLR-OFFICE-SERVERS-NETWORK
+        set member "net_172.16.80.0_255.255.255.192"
+    next
+    edit GROUP-BLR-OFFICE-SITE-NETWORK
+        set member "net_172.16.80.0_255.255.254.0"
+    next
+    edit GROUP-BLR-OFFICE-USERS-NETWORK
+        set member "net_172.16.81.0_255.255.255.0"
+    next
+    edit GROUP-BLR-PLANT-DMZ-INTERNAL
+        set member "net_172.16.89.64_255.255.255.224"
+    next
+    edit GROUP-BLR-PLANT-IP
+        set member "net_182.75.10.192_255.255.255.252" "net_182.74.160.96_255.255.255.248" "net_182.156.75.232_255.255.255.252" "net_182.156.86.104_255.255.255.248" "net_14.98.4.232_255.255.255.252" "net_14.98.7.176_255.255.255.240"
+    next
+    edit GROUP-BLR-PLANT-MANAGEMENT-NETWORK
+        set member "net_172.16.88.128_255.255.255.128"
+    next
+    edit GROUP-BLR-PLANT-SERVERS-NETWORK
+        set member "net_172.16.88.0_255.255.255.128"
+    next
+    edit GROUP-BLR-PLANT-SITE-NETWORK
+        set member "net_172.16.80.0_255.255.240.0"
+    next
+    edit GROUP-BLR-PLANT-USERS-NETWORK
+        set member "net_172.16.92.0_255.255.254.0"
+    next
+    edit GROUP-BLR-PLANT-VIDEO-NETWORK
+        set member "net_172.16.89.128_255.255.255.128"
+    next
+    edit GROUP-DATALINE-IP
+        set member "net_91.107.70.160_255.255.255.224"
+    next
+    edit GROUP-DATALINE-VSPHERE-IP
+        set member "net_95.181.193.160_255.255.255.224"
+    next
+    edit GROUP-DMVPN-NETWORK
+        set member "net_172.30.0.0_255.255.255.0" "net_172.31.0.0_255.255.255.0"
+    next
+    edit GROUP-DTL-DEVELOPER-NETWORK
+        set member "net_172.18.2.0_255.255.255.0"
+    next
+    edit GROUP-DTL-DEVWEB-NETWORK
+        set member "net_172.18.3.0_255.255.255.0"
+    next
+    edit GROUP-DTL-DMZ-INTERNAL
+        set member "net_172.16.111.0_255.255.255.0"
+    next
+    edit GROUP-EKATERINBURG-OFFICE-IP
+        set member "net_195.58.13.228_255.255.255.252"
+    next
+    edit GROUP-EXTERNAL-1CFRESHCOM-SERVERS
+        set member "host_185.98.85.241" "host_185.98.85.245" "host_104.17.64.4" "host_209.197.3.15" "host_64.233.162.113" "host_209.197.3.24" "host_64.233.162.139" "host_64.233.162.138" "host_64.233.162.101"
+    next
+    edit GROUP-EXTERNAL-GOOGLE-SERVICES
+        set member "net_35.190.247.0_255.255.255.0" "net_35.191.0.0_255.255.0.0" "net_64.233.160.0_255.255.224.0" "net_66.102.0.0_255.255.240.0" "net_66.249.80.0_255.255.240.0" "net_72.14.192.0_255.255.192.0" "net_74.125.0.0_255.255.0.0" "net_108.177.8.0_255.255.248.0" "net_108.177.96.0_255.255.224.0" "net_130.211.0.0_255.255.252.0" "net_172.217.0.0_255.255.224.0" "net_172.217.32.0_255.255.240.0" "net_172.217.128.0_255.255.224.0" "net_172.217.160.0_255.255.240.0" "net_172.217.192.0_255.255.224.0" "net_173.194.0.0_255.255.0.0" "net_209.85.128.0_255.255.128.0" "net_216.239.32.0_255.255.224.0" "net_216.58.192.0_255.255.224.0"
+    next
+    edit GROUP-EXTERNAL-ITLITE-COMPANY
+        set member "host_91.218.248.1" "host_77.222.130.59" "host_212.115.239.206" "host_91.218.249.170" "host_134.249.152.201"
+    next
+    edit GROUP-EXTERNAL-LORA-SERVERS
+        set member "host_185.135.172.51" "host_185.135.172.52" "host_185.135.172.53" "host_185.135.172.54"
+    next
+    edit GROUP-EXTERNAL-LUCIDTECH
+        set member "host_88.87.70.159" "host_159.89.167.182" "host_174.138.123.88" "host_180.151.16.65" "host_174.138.121.227"
+    next
+    edit GROUP-EXTERNAL-MANAGEENGINE-SMTP-CLIENTS
+        set member "host_74.201.84.80" "host_74.201.152.59" "host_74.201.154.214" "host_165.254.168.201" "host_216.52.72.54" "host_165.254.172.54" "host_204.141.32.54" "host_8.40.222.54" "host_216.52.72.1" "host_204.141.32.1" "host_8.40.222.1" "host_135.84.80.131" "host_135.84.82.131" "host_8.39.54.54" "host_204.141.42.54" "host_136.143.187.53" "host_136.143.186.53" "host_31.186.226.139" "host_87.252.213.139" "host_185.20.209.139" "host_84.207.209.139"
+    next
+    edit GROUP-EXTERNAL-MTS-ADM
+        set member "host_176.118.29.208"
+    next
+    edit GROUP-HOST-KIEV-HV-11
+        set member "host_172.16.44.5"
+    next
+    edit GROUP-HOST-KIEV-POLYCOM
+        set member "host_172.16.47.100"
+    next
+    edit GROUP-HOST-KIEV-WIFI-01
+        set member "host_172.16.44.2"
+    next
+    edit GROUP-HOST-KIEV-WIFI-02
+        set member "host_172.16.44.3"
+    next
+    edit GROUP-HOST-ROGOZIN
+        set member "host_172.16.75.20"
+    next
+    edit GROUP-HOST-RZN-GALDINAG
+        set member "host_172.16.73.36"
+    next
+    edit GROUP-HOST-RZN-POST-1
+        set member "host_172.16.72.112"
+    next
+    edit GROUP-HOST-RZN-POST-2
+        set member "host_172.16.73.8" "host_172.16.74.90"
+    next
+    edit GROUP-HOST-RZN-POST-KZ-1
+        set member "host_172.16.72.251"
+    next
+    edit GROUP-HOST-RZN-POST-RER
+        set member "host_172.16.72.121"
+    next
+    edit GROUP-HOST-RZN-SECURITY-POSTS
+        set member "GROUP-HOST-RZN-POST-1" "GROUP-HOST-RZN-POST-2" "GROUP-HOST-RZN-POST-KZ-1" "GROUP-HOST-RZN-POST-RER" "GROUP-HOST-ROGOZIN"
+    next
+    edit GROUP-HOST-SLV-RFS4000-1
+        set member "host_172.16.56.146"
+    next
+    edit GROUP-HOST-YAKOVLEV-1
+        set member "host_172.16.72.105"
+    next
+    edit GROUP-KAZAN-OFFICE-IP
+        set member "net_87.117.164.208_255.255.255.240" "host_94.180.246.100" "net_95.161.218.244_255.255.255.252"
+    next
+    edit GROUP-KIEV-OFFICE-IP
+        set member "net_46.164.154.176_255.255.255.240"
+    next
+    edit GROUP-KIEV-SERVERS-NETWORK
+        set member "net_172.16.44.0_255.255.255.192"
+    next
+    edit GROUP-KIEV-SITE-NETWORK
+        set member "net_172.16.44.0_255.255.252.0"
+    next
+    edit GROUP-KIEV-SKLAD-IP
+        set member "net_94.100.218.0_255.255.255.0"
+    next
+    edit GROUP-KRASNODAR-OFFICE-IP
+        set member "net_46.29.8.0_255.255.248.0"
+    next
+    edit GROUP-KRASNOYARSK-OFFICE-IP
+        set member "net_80.255.133.8_255.255.255.252"
+    next
+    edit GROUP-MSK-IP
+        set member "net_195.218.186.160_255.255.255.240" "net_89.175.161.12_255.255.255.252" "net_89.175.162.112_255.255.255.248" "net_85.235.184.140_255.255.255.252" "net_89.175.187.16_255.255.255.240"
+    next
+    edit GROUP-RZN-IP
+        set member "net_193.34.10.216_255.255.255.248" "net_78.31.79.24_255.255.255.248" "net_37.28.184.0_255.255.255.0"
+    next
+    edit GROUP-SLV-IP
+        set member "net_91.192.201.16_255.255.255.240" "net_193.108.226.32_255.255.255.240" "net_91.192.201.16_255.255.255.248"
+    next
+    edit GROUP-MUNCHEN-OFFICE-IP
+        set member "host_82.135.28.135" "net_82.135.110.240_255.255.255.248"
+    next
+    edit GROUP-NOVOSIBIRSK-OFFICE-IP
+        set member "net_195.82.144.32_255.255.255.224"
+    next
+    edit GROUP-ROSTOV-OFFICE-IP
+        set member "net_77.66.152.0_255.255.248.0" "host_176.213.137.205"
+    next
+    edit GROUP-SAMARA-OFFICE-IP
+        set member "net_217.79.22.192_255.255.255.192" "net_194.190.137.0_255.255.255.0" "net_194.190.109.0_255.255.255.0"
+    next
+    edit GROUP-SPB-OFFICE-IP
+        set member "net_84.52.92.176_255.255.255.240" "host_62.32.74.18"
+    next
+    edit GROUP-VOLGOGRAD-OFFICE-IP
+        set member "host_88.87.70.159" "host_91.212.47.38" "host_78.107.191.77"
+    next
+    edit GROUP-VORONEJ-OFFICE-IP
+        set member "net_81.211.35.44_255.255.255.252"
+    next
+    edit GROUP-LTCOMPANY-ALL-IP
+        set member "GROUP-MSK-IP" "GROUP-RZN-IP" "GROUP-SLV-IP" "GROUP-KIEV-OFFICE-IP" "GROUP-BLR-PLANT-IP" "GROUP-BLR-OFFICE-IP" "GROUP-ALMATA-OFFICE-IP" "GROUP-ASTANA-OFFICE-IP" "GROUP-ASTANA-SKLAD-IP" "GROUP-EKATERINBURG-OFFICE-IP" "GROUP-KAZAN-OFFICE-IP" "GROUP-KIEV-SKLAD-IP" "GROUP-KRASNODAR-OFFICE-IP" "GROUP-MUNCHEN-OFFICE-IP" "GROUP-NOVOSIBIRSK-OFFICE-IP" "GROUP-ROSTOV-OFFICE-IP" "GROUP-SAMARA-OFFICE-IP" "GROUP-SPB-OFFICE-IP" "GROUP-DATALINE-IP" "GROUP-VOLGOGRAD-OFFICE-IP" "GROUP-KRASNOYARSK-OFFICE-IP" "GROUP-VORONEJ-OFFICE-IP" "GROUP-DATALINE-VSPHERE-IP"
+    next
+    edit GROUP-MSK-DEVELOPER-NETWORK
+        set member "net_172.18.1.0_255.255.255.0"
+    next
+    edit GROUP-MSK-DMZ-INTERNAL
+        set member "net_172.16.17.64_255.255.255.224"
+    next
+    edit GROUP-MSK-TSD-NETWORK
+        set member "net_172.16.21.0_255.255.255.128"
+    next
+    edit GROUP-MSK-VIDEO-NETWORK
+        set member "net_172.16.22.0_255.255.255.128"
+    next
+    edit GROUP-SERVER-MSK-WLC-01
+        set member "host_172.16.16.193"
+    next
+    edit GROUP-SERVER-MSK-WLC-HA
+        set member "host_172.16.16.195"
+    next
+    edit GROUP-MSK-WLC-CONTROLLERS
+        set member "GROUP-SERVER-MSK-WLC-01" "GROUP-SERVER-MSK-WLC-HA"
+    next
+    edit GROUP-PRINTER-MSK-PRN-526-1
+        set member "host_172.16.23.24"
+    next
+    edit GROUP-PRINTER-RZN-PLOTER-OCE300
+        set member "host_172.16.71.47"
+    next
+    edit GROUP-ROUTERS-ALL-REGIONS
+    next
+    edit GROUP-RZN-DMZ-INTERNAL
+        set member "net_172.16.65.64_255.255.255.224"
+    next
+    edit GROUP-RZN-TSD-NETWORK
+        set member "net_172.16.69.0_255.255.255.0"
+    next
+    edit GROUP-RZN-VIDEO-NETWORK
+        set member "net_172.16.70.0_255.255.255.128" "net_172.16.66.0_255.255.255.0"
+    next
+    edit GROUP-SERVER-BLR-ADM-11
+        set member "host_172.16.88.7"
+    next
+    edit GROUP-SERVER-BLR-CONTROL-01
+        set member "host_172.16.88.11"
+    next
+    edit GROUP-SERVER-BLR-DC-11
+        set member "host_172.16.88.5"
+    next
+    edit GROUP-SERVER-BLR-DC-12
+        set member "host_172.16.88.10"
+    next
+    edit GROUP-SERVER-BLR-DNS-11
+        set member "host_172.16.88.12"
+    next
+    edit GROUP-SERVER-BLR-EX-11
+        set member "host_172.16.88.14"
+    next
+    edit GROUP-SERVER-BLR-FS-11
+        set member "host_172.16.88.6"
+    next
+    edit GROUP-SERVER-BLR-LCED-11
+        set member "host_172.16.89.68"
+    next
+    edit GROUP-SERVER-BLR-LCFE-11
+        set member "host_172.16.88.15"
+    next
+    edit GROUP-SERVER-BLR-MAILGATE-11
+        set member "host_172.16.89.45"
+    next
+    edit GROUP-SERVER-BLR-MNG-11
+        set member "host_172.16.88.230"
+    next
+    edit GROUP-SERVER-BLR-PRN-11
+        set member "host_172.16.88.9"
+    next
+    edit GROUP-SERVER-BLR-RADIUS-11
+        set member "host_172.16.88.16"
+    next
+    edit GROUP-SERVER-BLR-VOIP-11
+        set member "host_172.16.94.5"
+    next
+    edit GROUP-SERVER-BLR-VOIP-12
+        set member "host_172.16.94.6"
+    next
+    edit GROUP-SERVER-BLR-WEB-02
+        set member "host_172.16.89.41"
+    next
+    edit GROUP-SERVER-BLR-ZABPROXY-01
+        set member "host_172.16.89.6"
+    next
+    edit GROUP-SERVER-DTL-1C-11
+        set member "host_172.16.110.153"
+    next
+    edit GROUP-SERVER-DTL-1C-11-ILO
+        set member "host_172.16.110.152"
+    next
+    edit GROUP-SERVER-DTL-1FWEB-01
+        set member "host_172.16.110.50"
+    next
+    edit GROUP-SERVER-DTL-1FWEB-02
+        set member "host_172.16.110.51"
+    next
+    edit GROUP-SERVER-DTL-1FWGATE-01
+        set member "host_172.16.110.53"
+    next
+    edit GROUP-SERVER-DTL-APP-15
+        set member "host_172.16.111.15"
+    next
+    edit GROUP-SERVER-DTL-CDN-01
+        set member "host_172.16.111.10"
+    next
+    edit GROUP-SERVER-DTL-DC-11
+        set member "host_172.16.110.6"
+    next
+    edit GROUP-SERVER-DTL-DC-12
+        set member "host_172.16.110.7"
+    next
+    edit GROUP-SERVER-DTL-DEV-11
+        set member "host_172.18.2.9"
+    next
+    edit GROUP-SERVER-DTL-DEVOPS-01
+        set member "host_172.18.2.7"
+    next
+    edit GROUP-SERVER-DTL-DEVOPS-02
+        set member "host_172.18.2.5"
+    next
+    edit GROUP-SERVER-DTL-DEVOPS-03
+        set member "host_172.18.2.6"
+    next
+    edit GROUP-SERVER-DTL-DRDB-01
+        set member "host_172.16.110.28"
+    next
+    edit GROUP-SERVER-DTL-ERPCOLL-01
+        set member "host_172.18.2.12"
+    next
+    edit GROUP-SERVER-DTL-EX-11
+        set member "host_172.16.110.11"
+    next
+    edit GROUP-SERVER-DTL-EX-12
+        set member "host_172.16.110.23"
+    next
+    edit GROUP-SERVER-DTL-EX-14
+        set member "host_172.16.110.24"
+    next
+    edit GROUP-SERVER-DTL-FS-11
+        set member "host_172.16.110.14"
+    next
+    edit GROUP-SERVER-DTL-FS-12
+        set member "host_172.16.110.10"
+    next
+    edit GROUP-SERVER-DTL-FTP-01
+        set member "host_172.16.111.13"
+    next
+    edit GROUP-SERVER-DTL-IIS-11
+        set member "host_172.16.111.6"
+    next
+    edit GROUP-SERVER-DTL-LIC-11
+        set member "host_172.16.110.15"
+    next
+    edit GROUP-SERVER-DTL-LIC-12
+        set member "host_172.16.110.34"
+    next
+    edit GROUP-SERVER-DTL-LKD-01
+        set member "host_172.16.111.54"
+    next
+    edit GROUP-SERVER-DTL-MAILGATE-11
+        set member "host_172.16.111.8"
+    next
+    edit GROUP-SERVER-DTL-MAILGATE-12
+        set member "host_172.16.111.12"
+    next
+    edit GROUP-SERVER-DTL-MEDIACDN-01
+        set member "host_172.16.111.9"
+    next
+    edit GROUP-SERVER-DTL-RABBIT-01
+        set member "host_172.16.110.59"
+    next
+    edit GROUP-SERVER-DTL-RABBIT-02
+        set member "host_172.16.110.60"
+    next
+    edit GROUP-SERVER-DTL-RDCBR-01
+        set member "host_172.16.110.26"
+    next
+    edit GROUP-SERVER-DTL-RDCBR-02
+        set member "host_172.16.110.27"
+    next
+    edit GROUP-SERVER-DTL-RDGW-01
+        set member "host_172.16.111.55"
+    next
+    edit GROUP-SERVER-DTL-RDS-11
+        set member "host_172.16.110.16"
+    next
+    edit GROUP-SERVER-DTL-RDS-12
+        set member "host_172.16.110.17"
+    next
+    edit GROUP-SERVER-DTL-RDS-14
+        set member "host_172.16.110.58"
+    next
+    edit GROUP-SERVER-DTL-RDS-15
+        set member "host_172.16.110.29"
+    next
+    edit GROUP-SERVER-DTL-RDS-16
+        set member "host_172.16.110.30"
+    next
+    edit GROUP-SERVER-DTL-RDS-17
+        set member "host_172.16.110.31"
+    next
+    edit GROUP-SERVER-DTL-RDS-18
+        set member "host_172.16.110.32"
+    next
+    edit GROUP-SERVER-DTL-RDS-20
+        set member "host_172.16.110.35"
+    next
+    edit GROUP-SERVER-DTL-RDWEB-01
+        set member "host_172.16.111.56"
+    next
+    edit GROUP-SERVER-DTL-WEB-01
+        set member "host_172.16.111.53"
+    next
+    edit GROUP-SERVER-DTL-WEBGATE-01
+        set member "host_172.16.111.51"
+    next
+    edit GROUP-SERVER-DTL-ZABB-11
+        set member "host_172.16.110.5"
+    next
+    edit GROUP-SERVER-DTL-ZABPROXY-01
+        set member "host_172.16.110.19"
+    next
+    edit GROUP-SERVER-IND-DC-01
+        set member "host_172.16.80.5"
+    next
+    edit GROUP-SERVER-IND-FS-01
+        set member "host_172.16.80.6"
+    next
+    edit GROUP-SERVER-ITLITE-1C-01
+        set member "host_172.16.110.234"
+    next
+    edit GROUP-SERVER-ITLITE-1C-01-IPMI
+        set member "host_172.16.110.237"
+    next
+    edit GROUP-SERVER-ITLITE-1C-02
+        set member "host_172.16.110.240"
+    next
+    edit GROUP-SERVER-ITLITE-1C-03
+        set member "host_172.16.110.236"
+    next
+    edit GROUP-SERVER-ITLITE-ADM
+        set member "host_172.16.110.233"
+    next
+    edit GROUP-SERVER-ITLITE-DEV-01
+        set member "host_172.16.110.236"
+    next
+    edit GROUP-SERVER-ITLITE-DEV-02
+        set member "host_172.16.110.235"
+    next
+    edit GROUP-SERVER-ITLITE-DEV-02-IPMI
+        set member "host_172.16.110.238"
+    next
+    edit GROUP-SERVER-ITLITE-SQL-02
+        set member "host_172.16.110.242"
+    next
+    edit GROUP-SERVER-ITLITE-SQL-02-IPMI
+        set member "host_172.16.110.243"
+    next
+    edit GROUP-SERVER-ITLITE-WEB-01
+        set member "host_172.16.110.230"
+    next
+    edit GROUP-SERVER-ITLITE-WEB-02
+        set member "host_172.16.110.231"
+    next
+    edit GROUP-SERVER-ITLITE-WEB-03
+        set member "host_172.16.111.232"
+    next
+    edit GROUP-SERVER-KIEV-DC-14
+        set member "host_172.16.44.6"
+    next
+    edit GROUP-SERVER-KIEV-FS-11
+        set member "host_172.16.44.7"
+    next
+    edit GROUP-SERVER-KIEV-VOIP-11
+        set member "host_172.16.47.5"
+    next
+    edit GROUP-SERVER-KZ-VOIP-01
+        set member "host_172.16.82.130"
+    next
+    edit GROUP-SERVER-MSK-1C-01
+        set member "host_172.16.16.8"
+    next
+    edit GROUP-SERVER-MSK-APP-02
+        set member "host_172.16.16.5"
+    next
+    edit GROUP-SERVER-MSK-APP-03
+        set member "host_172.16.16.13"
+    next
+    edit GROUP-SERVER-MSK-BACKUP-11
+        set member "host_172.16.110.164"
+    next
+    edit GROUP-SERVER-MSK-BACKUP-12
+        set member "host_172.16.16.10"
+    next
+    edit GROUP-SERVER-MSK-BACKUP-12-ILO
+        set member "host_172.16.16.147"
+    next
+    edit GROUP-SERVER-MSK-BI-11
+        set member "host_172.16.16.26"
+    next
+    edit GROUP-SERVER-MSK-BUH-01
+        set member "host_172.16.16.18"
+    next
+    edit GROUP-SERVER-MSK-CA-11
+        set member "host_172.16.16.48"
+    next
+    edit GROUP-SERVER-MSK-CCTV-11
+        set member "host_172.16.16.54"
+    next
+    edit GROUP-SERVER-MSK-DC-11
+        set member "host_172.16.16.45"
+    next
+    edit GROUP-SERVER-MSK-DC-14
+        set member "host_172.16.16.30"
+    next
+    edit GROUP-SERVER-MSK-DC-15
+        set member "host_172.16.16.25"
+    next
+    edit GROUP-SERVER-MSK-DEV-13
+        set member "host_172.16.16.9"
+    next
+    edit GROUP-SERVER-MSK-DEV-13-ILO
+        set member "host_172.16.16.170"
+    next
+    edit GROUP-SERVER-MSK-DHCP-11
+        set member "host_172.16.16.24"
+    next
+    edit GROUP-SERVER-MSK-DHCP-12
+        set member "host_172.16.16.34"
+    next
+    edit GROUP-SERVER-MSK-DLNA-11
+        set member "host_172.16.16.64"
+    next
+    edit GROUP-SERVER-MSK-DNS-01
+        set member "host_172.16.16.12"
+    next
+    edit GROUP-SERVER-MSK-FS-11
+        set member "host_172.16.16.14"
+    next
+    edit GROUP-SERVER-MSK-LCED-11
+        set member "host_172.16.17.68"
+    next
+    edit GROUP-SERVER-MSK-LCFE-11
+        set member "host_172.16.16.57"
+    next
+    edit GROUP-SERVER-MSK-MNG-11
+        set member "host_172.16.16.230"
+    next
+    edit GROUP-SERVER-MSK-MSA-01-A
+        set member "host_172.16.17.143"
+    next
+    edit GROUP-SERVER-MSK-MSA-01-B
+        set member "host_172.16.17.144"
+    next
+    edit GROUP-SERVER-MSK-POLYCOM-502
+        set member "host_172.16.28.13"
+    next
+    edit GROUP-SERVER-MSK-POLYCOM-509
+        set member "host_172.16.28.14"
+    next
+    edit GROUP-SERVER-MSK-POLYCOM-511
+        set member "host_172.16.28.15"
+    next
+    edit GROUP-SERVER-MSK-POLYCOM-MCA
+        set member "host_172.16.28.8"
+    next
+    edit GROUP-SERVER-MSK-POLYCOM-MCU
+        set member "host_172.16.28.9"
+    next
+    edit GROUP-SERVER-MSK-POLYCOM-VBP-E
+        set member "host_172.16.28.7"
+    next
+    edit GROUP-SERVER-MSK-POLYCOM-VBP-ST
+        set member "host_172.16.28.6"
+    next
+    edit GROUP-SERVER-MSK-PRN-11
+        set member "host_172.16.16.17"
+    next
+    edit GROUP-SERVER-MSK-PUBLIC-01
+        set member "host_172.16.16.49"
+    next
+    edit GROUP-SERVER-MSK-PUBLIC-11
+        set member "host_172.16.16.23"
+    next
+    edit GROUP-SERVER-MSK-RADIUS-01
+        set member "host_172.16.16.16"
+    next
+    edit GROUP-SERVER-MSK-RDS-11
+        set member "host_172.18.1.9"
+    next
+    edit GROUP-SERVER-MSK-RODC-13
+        set member "host_172.18.1.5"
+    next
+    edit GROUP-SERVER-MSK-SIEMKIB-01
+        set member "host_172.16.23.135"
+    next
+    edit GROUP-SERVER-MSK-SIEMLOGST-01
+        set member "host_172.16.23.136"
+    next
+    edit GROUP-SERVER-MSK-SIEMPVE-01
+        set member "host_172.16.23.133"
+    next
+    edit GROUP-SERVER-MSK-SQL-12
+        set member "host_172.16.16.28"
+    next
+    edit GROUP-SERVER-MSK-VOIP-12
+        set member "host_172.16.28.5"
+    next
+    edit GROUP-SERVER-MSK-WAC-11
+        set member "host_172.16.16.59"
+    next
+    edit GROUP-SERVER-MSK-WDS-01
+        set member "host_172.16.17.134"
+    next
+    edit GROUP-SERVER-MSK-WLC-02
+        set member "host_172.16.16.194"
+    next
+    edit GROUP-SERVER-MSK-WSUS-11
+        set member "host_172.16.16.7"
+    next
+    edit GROUP-SERVER-MSK-ZABPROXY-01
+        set member "host_172.16.17.14"
+    next
+    edit GROUP-SERVER-MSK-ZABSRV-01
+        set member "host_172.16.17.9"
+    next
+    edit GROUP-SERVER-MSK-ZABWEB-01
+        set member "host_172.16.17.8"
+    next
+    edit GROUP-SERVER-ROOT-DC-01
+        set member "host_172.16.16.32"
+    next
+    edit GROUP-SERVER-RZN-1C-13
+        set member "host_172.16.64.20"
+    next
+    edit GROUP-SERVER-RZN-APP-03
+        set member "host_172.16.64.24"
+    next
+    edit GROUP-SERVER-RZN-BACKUP-12
+        set member "host_172.16.64.50"
+    next
+    edit GROUP-SERVER-RZN-CCTV-12
+        set member "host_172.16.64.55"
+    next
+    edit GROUP-SERVER-RZN-DC-11
+        set member "host_172.16.64.4"
+    next
+    edit GROUP-SERVER-RZN-DC-12
+        set member "host_172.16.64.5"
+    next
+    edit GROUP-SERVER-RZN-DHCP-11
+        set member "host_172.16.64.30"
+    next
+    edit GROUP-SERVER-RZN-DHCP-12
+        set member "host_172.16.64.35"
+    next
+    edit GROUP-SERVER-RZN-DLNA-11
+        set member "host_172.16.64.19"
+    next
+    edit GROUP-SERVER-RZN-DNS-01
+        set member "host_172.16.64.40"
+    next
+    edit GROUP-SERVER-RZN-DVR-01
+        set member "host_172.16.70.19"
+    next
+    edit GROUP-SERVER-RZN-FS-01
+        set member "host_172.16.64.34"
+    next
+    edit GROUP-SERVER-RZN-FS-02
+        set member "host_172.16.64.14"
+    next
+    edit GROUP-SERVER-RZN-LCED-11
+        set member "host_172.16.65.68"
+    next
+    edit GROUP-SERVER-RZN-LCFE-11
+        set member "host_172.16.64.6"
+    next
+    edit GROUP-SERVER-RZN-LIC-11
+        set member "host_172.16.64.10"
+    next
+    edit GROUP-SERVER-RZN-LIC-14
+        set member "host_172.16.64.28"
+    next
+    edit GROUP-SERVER-RZN-MAILGATE-01
+        set member "host_172.16.65.45"
+    next
+    edit GROUP-SERVER-RZN-MNG-11
+        set member "host_172.16.64.230"
+    next
+    edit GROUP-SERVER-RZN-NVR-01
+        set member "host_172.16.70.18"
+    next
+    edit GROUP-SERVER-RZN-NVR-02
+        set member "host_172.16.70.20"
+    next
+    edit GROUP-SERVER-RZN-POLYCOM-CONFROOM-1
+        set member "host_172.16.76.5"
+    next
+    edit GROUP-SERVER-RZN-POLYCOM-CONFROOM-2
+        set member "host_172.16.76.6"
+    next
+    edit GROUP-SERVER-RZN-PRN-11
+        set member "host_172.16.64.15"
+    next
+    edit GROUP-SERVER-RZN-PRN-12
+        set member "host_172.16.64.17"
+    next
+    edit GROUP-SERVER-RZN-RADIUS-01
+        set member "host_172.16.64.8"
+    next
+    edit GROUP-SERVER-RZN-RDS-11
+        set member "host_172.16.64.11"
+    next
+    edit GROUP-SERVER-RZN-RDS-12
+        set member "host_172.16.64.12"
+    next
+    edit GROUP-SERVER-RZN-TSD-01
+        set member "host_172.16.64.23"
+    next
+    edit GROUP-SERVER-RZN-VOIP-11
+        set member "host_172.16.76.4"
+    next
+    edit GROUP-SERVER-RZN-WMS-01
+        set member "host_172.16.64.41"
+    next
+    edit GROUP-SERVER-RZN-WSUS-11
+        set member "host_172.16.64.7"
+    next
+    edit GROUP-SERVER-RZN-ZABPROXY-01
+        set member "host_172.16.65.6"
+    next
+    edit GROUP-SERVER-SLV-1C
+        set member "host_172.16.56.31"
+    next
+    edit GROUP-SERVER-SLV-BACKUP-01
+        set member "host_172.16.56.9"
+    next
+    edit GROUP-SERVER-SLV-BUX-01
+        set member "host_172.16.56.17"
+    next
+    edit GROUP-SERVER-SLV-DC-14
+        set member "host_172.16.56.15"
+    next
+    edit GROUP-SERVER-SLV-DC-15
+        set member "host_172.16.56.30"
+    next
+    edit GROUP-SERVER-SLV-DLNA-11
+        set member "host_172.16.60.78"
+    next
+    edit GROUP-SERVER-SLV-FS-11
+        set member "host_172.16.56.16"
+    next
+    edit GROUP-SERVER-SLV-FS-12
+        set member "host_172.16.56.14"
+    next
+    edit GROUP-SERVER-SLV-LCED-11
+        set member "host_172.16.57.68"
+    next
+    edit GROUP-SERVER-SLV-LCFE-11
+        set member "host_172.16.56.6"
+    next
+    edit GROUP-SERVER-SLV-LIC-02
+        set member "host_172.16.56.26"
+    next
+    edit GROUP-SERVER-SLV-MAILGATE-01
+        set member "host_172.16.56.23"
+    next
+    edit GROUP-SERVER-SLV-MNG-11
+        set member "host_172.16.56.159"
+    next
+    edit GROUP-SERVER-SLV-POLYCOM
+        set member "host_172.16.62.61"
+    next
+    edit GROUP-SERVER-SLV-RADIUS-11
+        set member "host_172.16.56.29"
+    next
+    edit GROUP-SERVER-SLV-REPO-01
+        set member "host_172.16.56.24"
+    next
+    edit GROUP-SERVER-SLV-VOIP-11
+        set member "host_172.16.62.5"
+    next
+    edit GROUP-SERVER-SLV-ZABB-11
+        set member "host_172.16.57.5"
+    next
+    edit GROUP-SERVER-SLV-ZABPROXY-01
+        set member "host_172.16.57.6"
+    next
+    edit GROUP-SERVER-SPB-VOIP-02
+        set member "host_172.17.15.15"
+    next
+    edit GROUP-SERVER-TST-DTL-WEB-20
+        set member "host_172.18.3.5"
+    next
+    edit GROUP-SERVER-TST-DTL-WEB-21
+        set member "host_172.18.3.6"
+    next
+    edit GROUP-SERVER-TST-DTL-WEB-22
+        set member "host_172.18.3.7"
+    next
+    edit GROUP-SERVER-TST-DTL-WEB-23
+        set member "host_172.18.3.8"
+    next
+    edit GROUP-SERVER-TST-DTL-WEB-24
+        set member "host_172.18.3.9"
+    next
+    edit GROUP-SERVER-TST-DTL-WEB-25
+        set member "host_172.18.3.10"
+    next
+    edit GROUP-SERVER-TST-RZN-TRM-03
+        set member "host_172.18.1.13"
+    next
+    edit GROUP-SERVER-UA-RDS
+        set member "host_172.16.56.13"
+    next
+    edit GROUP-SERVERS-1C-DEVELOPMENT
+    next
+    edit GROUP-SERVERS-1C-ENTERPRISE
+        set member "GROUP-SERVER-ITLITE-1C-01" "GROUP-SERVER-RZN-1C-13" "GROUP-SERVER-SLV-1C" "GROUP-SERVER-ITLITE-1C-02" "GROUP-SERVER-MSK-1C-01"
+    next
+    edit GROUP-SERVERS-1F-WEB
+        set member "GROUP-SERVER-DTL-1FWGATE-01" "GROUP-SERVER-DTL-1FWEB-01" "GROUP-SERVER-DTL-1FWEB-02"
+    next
+    edit GROUP-SERVERS-ADMIN
+        set member "host_172.16.16.15" "host_172.16.63.13"
+    next
+    edit GROUP-SERVERS-ASTERISK
+        set member "GROUP-SERVER-BLR-VOIP-11" "GROUP-SERVER-KZ-VOIP-01" "GROUP-SERVER-MSK-VOIP-12" "GROUP-SERVER-RZN-VOIP-11" "GROUP-SERVER-SLV-VOIP-11" "GROUP-SERVER-SPB-VOIP-02" "GROUP-SERVER-KIEV-VOIP-11" "GROUP-SERVER-BLR-VOIP-12"
+    next
+    edit GROUP-SERVERS-BACKUP
+        set member "GROUP-SERVER-MSK-BACKUP-11" "GROUP-SERVER-SLV-BACKUP-01" "GROUP-SERVER-MSK-BACKUP-12"
+    next
+    edit GROUP-SERVERS-DC
+        set member "host_172.16.16.45" "host_172.16.16.56" "host_172.16.64.4" "host_172.16.64.5" "host_172.16.56.15" "host_172.16.56.30" "host_172.16.44.6" "host_172.16.88.5" "host_172.16.88.10" "host_172.16.80.5" "host_172.16.110.6" "host_172.16.110.7" "GROUP-SERVER-RZN-DC-11" "GROUP-SERVER-RZN-DC-12" "GROUP-SERVER-DTL-DC-11" "GROUP-SERVER-DTL-DC-12" "GROUP-SERVER-SLV-DC-14" "GROUP-SERVER-SLV-DC-15" "GROUP-SERVER-KIEV-DC-14" "GROUP-SERVER-BLR-DC-11" "GROUP-SERVER-BLR-DC-12" "GROUP-SERVER-IND-DC-01" "GROUP-SERVER-MSK-DC-14" "GROUP-SERVER-MSK-DC-15"
+    next
+    edit GROUP-SERVERS-DC-OLD
+        set member "GROUP-SERVER-ROOT-DC-01"
+    next
+    edit GROUP-SERVERS-DC-PDC
+        set member "GROUP-SERVER-DTL-DC-11"
+    next
+    edit GROUP-SERVERS-EXCHANGE
+        set member "GROUP-SERVER-DTL-EX-11" "GROUP-SERVER-BLR-EX-11" "GROUP-SERVER-DTL-EX-12" "GROUP-SERVER-DTL-EX-14"
+    next
+    edit GROUP-SERVERS-FS
+        set member "GROUP-SERVER-BLR-FS-11" "GROUP-SERVER-DTL-FS-11" "GROUP-SERVER-IND-FS-01" "GROUP-SERVER-KIEV-FS-11" "GROUP-SERVER-RZN-FS-02" "GROUP-SERVER-SLV-FS-11" "GROUP-SERVER-SLV-FS-12" "GROUP-SERVER-MSK-CCTV-11" "GROUP-SERVER-SLV-DLNA-11" "GROUP-SERVER-DTL-FS-12"
+    next
+    edit GROUP-SERVERS-FS-NIX
+        set member "GROUP-SERVER-MSK-DLNA-11" "GROUP-SERVER-SLV-DLNA-11" "GROUP-SERVER-RZN-DLNA-11"
+    next
+    edit GROUP-SERVERS-KASPERSKY
+        set member "host_172.16.64.32" "host_172.16.56.9" "host_172.16.88.4" "GROUP-SERVER-SLV-BACKUP-01" "GROUP-SERVER-MSK-APP-03" "GROUP-SERVER-RZN-APP-03"
+    next
+    edit GROUP-SERVERS-LYNC-EDGE
+        set member "GROUP-SERVER-MSK-LCED-11" "GROUP-SERVER-RZN-LCED-11" "GROUP-SERVER-SLV-LCED-11" "GROUP-SERVER-BLR-LCED-11"
+    next
+    edit GROUP-SERVERS-LYNC-FE
+        set member "GROUP-SERVER-MSK-LCFE-11" "GROUP-SERVER-RZN-LCFE-11" "GROUP-SERVER-SLV-LCFE-11" "GROUP-SERVER-BLR-LCFE-11"
+    next
+    edit GROUP-SERVERS-MAILGATES
+        set member "GROUP-SERVER-RZN-MAILGATE-01" "GROUP-SERVER-BLR-MAILGATE-11" "GROUP-SERVER-DTL-MAILGATE-11" "GROUP-SERVER-DTL-MAILGATE-12" "GROUP-SERVER-SLV-MAILGATE-01"
+    next
+    edit GROUP-SERVERS-NIX-WEBPROXY
+        set member "GROUP-SERVER-BLR-WEB-02"
+    next
+    edit GROUP-SERVERS-NTP
+        set member "host_172.16.16.12" "GROUP-SERVER-RZN-DNS-01" "GROUP-SERVER-MSK-DNS-01" "GROUP-SERVER-KIEV-VOIP-11" "GROUP-SERVER-BLR-DNS-11"
+    next
+    edit GROUP-SERVERS-POLYCOM
+        set member "GROUP-SERVER-MSK-POLYCOM-502" "GROUP-SERVER-MSK-POLYCOM-509" "GROUP-SERVER-MSK-POLYCOM-511" "GROUP-SERVER-MSK-POLYCOM-MCA" "GROUP-SERVER-MSK-POLYCOM-MCU" "GROUP-SERVER-MSK-POLYCOM-VBP-E" "GROUP-SERVER-MSK-POLYCOM-VBP-ST" "GROUP-HOST-KIEV-POLYCOM" "GROUP-SERVER-SLV-POLYCOM" "GROUP-SERVER-RZN-POLYCOM-CONFROOM-1" "GROUP-SERVER-RZN-POLYCOM-CONFROOM-2"
+    next
+    edit GROUP-SERVERS-PRINT
+        set member "GROUP-SERVER-BLR-PRN-11" "GROUP-SERVER-MSK-PRN-11" "GROUP-SERVER-RZN-PRN-11" "GROUP-SERVER-RZN-PRN-12"
+    next
+    edit GROUP-SERVERS-RADIUS
+        set member "GROUP-SERVER-MSK-RADIUS-01" "GROUP-SERVER-RZN-RADIUS-01" "GROUP-SERVER-SLV-RADIUS-11" "GROUP-SERVER-BLR-RADIUS-11"
+    next
+    edit GROUP-SERVERS-RODC
+        set member "GROUP-SERVER-MSK-RODC-13"
+    next
+    edit GROUP-SERVERS-SIEM
+        set member "GROUP-SERVER-MSK-SIEMPVE-01" "GROUP-SERVER-MSK-SIEMKIB-01" "GROUP-SERVER-MSK-SIEMLOGST-01"
+    next
+    edit GROUP-SERVERS-TERMINAL-SERVICES
+        set member "GROUP-SERVER-DTL-RDS-11" "GROUP-SERVER-DTL-RDS-12" "GROUP-SERVER-DTL-RDS-14" "GROUP-SERVER-DTL-LIC-11" "GROUP-SERVER-MSK-RDS-11" "GROUP-SERVER-RZN-LIC-11" "GROUP-SERVER-RZN-RDS-12" "GROUP-SERVER-UA-RDS" "GROUP-SERVER-RZN-RDS-11" "GROUP-SERVER-DTL-RDCBR-01" "GROUP-SERVER-DTL-RDCBR-02" "GROUP-SERVER-DTL-RDGW-01" "GROUP-SERVER-DTL-RDS-15" "GROUP-SERVER-DTL-RDS-16" "GROUP-SERVER-DTL-RDWEB-01" "GROUP-SERVER-DTL-RDS-17" "GROUP-SERVER-DTL-RDS-20" "GROUP-SERVER-DTL-RDS-18"
+    next
+    edit GROUP-SERVERS-VMWARE
+        set member "GROUP-SERVER-MSK-MNG-11" "GROUP-SERVER-RZN-MNG-11" "GROUP-SERVER-SLV-MNG-11" "GROUP-SERVER-BLR-MNG-11"
+    next
+    edit GROUP-SERVERS-WDS
+        set member "host_172.16.16.73" "host_172.16.64.14" "host_172.16.17.134" "host_172.16.65.134" "GROUP-SERVER-MSK-WDS-01"
+    next
+    edit GROUP-SERVERS-WEBSITE
+        set member "GROUP-SERVER-DTL-WEB-01"
+    next
+    edit GROUP-SERVERS-WSUS
+        set member "host_172.16.64.32" "host_172.16.88.4" "GROUP-SERVER-RZN-WSUS-11" "GROUP-SERVER-MSK-WSUS-11"
+    next
+    edit GROUP-SERVERS-ZABBIX
+        set member "host_172.16.17.5" "host_172.16.17.6" "host_172.16.65.5" "host_172.16.89.5" "host_172.16.110.5" "GROUP-SERVER-SLV-ZABB-11" "GROUP-SERVER-MSK-ZABSRV-01" "GROUP-SERVER-BLR-ZABPROXY-01" "GROUP-SERVER-MSK-ZABWEB-01" "GROUP-SERVER-SLV-ZABPROXY-01" "GROUP-SERVER-MSK-ZABPROXY-01" "GROUP-SERVER-DTL-ZABPROXY-01" "GROUP-SERVER-RZN-ZABPROXY-01"
+    next
+    edit GROUP-SERVICE-NETWORK
+        set member "net_172.16.17.128_255.255.255.192"
+    next
+    edit GROUP-SLV-DMZ-INTERNAL
+        set member "net_172.16.57.64_255.255.255.224"
+    next
+    edit GROUP-SLV-MANAGEMENT-NETWORK
+        set member "net_172.16.56.128_255.255.255.128"
+    next
+    edit GROUP-SLV-SERVERS-NETWORK
+        set member "net_172.16.56.0_255.255.255.128"
+    next
+    edit GROUP-SLV-SITE-NETWORK
+        set member "net_172.16.56.0_255.255.248.0"
+    next
+    edit GROUP-SLV-VIDEO-NETWORK
+        set member "net_172.16.57.128_255.255.255.128"
+    next
+    edit GROUP-STUDYROOM-NETWORK
+        set member "net_172.16.17.192_255.255.255.192"
+    next
+    edit GROUP-TEL-SLV-4111
+        set member "host_172.16.62.23"
+    next
+    edit GROUP-WIFI-ALL-REGIONS
+    next
+end
