@@ -1,1 +1,3 @@
-from Scripts.FortiGate.setinterfaces import setInterfaces
+from Scripts.FortiGate.setinterfaces import setinterfaces
+from Scripts.FortiGate.setobjects import setobjects
+from Scripts.FortiGate.setobjectgroups import setobjectgroups

@@ -1,4 +1,4 @@
-def getInterfaces(DATA) -> dict:
+def getinterfaces(DATA) -> dict:
     result = dict()
     interface_name = ""
     interface_params = dict()
@@ -10,6 +10,16 @@ def getInterfaces(DATA) -> dict:
         if data[0] == "interface":
             interface_detected = True
             interface_name = data[1]
+            if interface_name.count('.'):
+                interface_params["type"] = 'subinterface'
+                interface_params["vlan"] = interface_name.split('.')[1]
+                interface_params["parent"] = interface_name.split('.')[0]
+            elif interface_name.startswith('Redundant'):
+                interface_params["type"] = 'redundant'
+            elif interface_name.startswith('Tunnel'):
+                interface_params["type"] = 'tunnel'
+            else:
+                interface_params["type"] = 'physical'
             # print("Interface detected", data[1])
         if interface_detected:
             if data[0] == "!":

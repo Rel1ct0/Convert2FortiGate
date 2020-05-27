@@ -15,6 +15,8 @@ def getinterfaces(DATA) -> dict:
                 interface_params["parent"] = interface_name.split('.')[0]
             elif interface_name.startswith('Redundant'):
                 interface_params["type"] = 'redundant'
+            elif interface_name.startswith('Tunnel'):
+                interface_params["type"] = 'tunnel'
             else:
                 interface_params["type"] = 'physical'
             # print("Interface detected", data[1])
