@@ -30,7 +30,7 @@ except Exception as error:
 ConfigDict = parseconfig.parseconfig(INPUTDATA, FWTYPE.lower())
 ConvertedConfig = parseconfig.createconfig(ConfigDict)
 
-with open('rawrict.txt', 'w') as raw:
+with open('rawdict.txt', 'w') as raw:
     raw.write(pprint.pformat(ConfigDict))
 
 try:

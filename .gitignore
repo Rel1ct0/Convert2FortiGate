@@ -128,5 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 /rawrict.txt
+/rawdict.txt
 /TestData/
 /fgateconfig.txt

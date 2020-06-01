@@ -38,4 +38,6 @@ def getinterfaces(DATA) -> dict:
                     interface_params["netmask"] = data[3]
                 if data[0] == "shutdown":
                     interface_params["shutdown"] = True
+                if data[0] == "description":
+                    interface_params["description"] = ' '.join(map(str, data[1:]))
     return result
