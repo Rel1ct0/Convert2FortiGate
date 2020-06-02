@@ -49,4 +49,6 @@ def getinterfaces(DATA) -> dict:
                     if not interface_params.get('dhcp-relay'):
                         interface_params['dhcp-relay'] = list()
                     interface_params['dhcp-relay'].append(data[2])
+                if data[0] == "zone-member":
+                    interface_params["zone"] = data[2]
     return result
