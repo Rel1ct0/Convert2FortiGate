@@ -1,8 +1,8 @@
 def setinterfaces(DATA: dict) -> str:
     result = 'config system interface\n'
-    brk = ' '*4
-    next_phys_port_number = 1
-    interface_map = dict()
+    brk = ' '*4  # Standard FortiGate indentation
+    next_phys_port_number = 1  # Will number physical ports starting with port1
+    interface_map = dict()  # Will save mapping between old and new interfaces to be used in other scripts
     for interface, params in DATA['interfaces'].items():
         if params['type'] == 'tunnel':  # ignore tunnel interfaces
             print('Skipping tunnel interface', interface)
@@ -29,9 +29,9 @@ def setinterfaces(DATA: dict) -> str:
             result = result + brk * 2 + 'set secondary-ip enable\n'
             result = result + brk * 2 + 'config secondaryip\n'
             n = 1
-            for nextip in params['secondary']:
+            for nextIp in params['secondary']:
                 result = result + brk * 3 + 'edit ' + str(n) + '\n'
-                result = result + brk * 4 + 'set ip ' + nextip[0] + ' ' + nextip[1] + '\n'
+                result = result + brk * 4 + 'set ip ' + nextIp[0] + ' ' + nextIp[1] + '\n'
                 result = result + brk * 3 + 'next\n'
                 n += 1
             result = result + brk * 2 + 'end\n'

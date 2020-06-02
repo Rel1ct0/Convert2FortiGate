@@ -30,16 +30,12 @@ except Exception as error:
 ConfigDict = parseconfig.parseconfig(INPUTDATA, FWTYPE.lower())
 ConvertedConfig = parseconfig.createconfig(ConfigDict)
 
-with open('rawdict.txt', 'w') as raw:
+with open('rawdict.txt', 'w') as raw:  # Temp file with extracted config to be converted
     raw.write(pprint.pformat(ConfigDict))
 
 try:
     with open(OUTFILE, 'w') as OUTPUTFILE:
         OUTPUTFILE.write(ConvertedConfig)
-        #OUTPUTFILE.write(str(ConfigDict))
 except Exception as error:
     print("Can not open", OUTFILE, "for writing, got", error)
     exit()
-
-#pprint.pprint(ConfigDict)
-#pprint.pprint(parseconfig.createconfig(ConfigDict))
