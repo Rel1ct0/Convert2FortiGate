@@ -10,5 +10,5 @@ def setzones(DATA: dict) -> str:
             result = result + brk + 'edit ' + zone + '\n'
             result = result + brk * 2 + 'set members ' + ' '.join(map(str, real_members)) + '\n'
             result = result + brk + 'next\n'
-            result = result + 'end\n'
+    result = result + 'end\n'
     return result
