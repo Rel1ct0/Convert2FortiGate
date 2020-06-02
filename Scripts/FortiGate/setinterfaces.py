@@ -22,7 +22,7 @@ def setinterfaces(DATA: dict) -> str:
         if params.get('ip'):
             result = result + brk * 2 + 'set ip ' + params['ip'] + ' ' + params['netmask'] + '\n'
         if params.get('description'):
-            result = result + brk * 2 + 'set comment ' + params['description'] + '\n'
+            result = result + brk * 2 + 'set description "' + params['description'] + '"\n'
         if params['shutdown']:
             result = result + brk * 2 + 'set status down\n'
         if params.get('secondary'):

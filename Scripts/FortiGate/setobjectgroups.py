@@ -8,7 +8,7 @@ def setobjectgroups(DATA: dict) -> str:
     for ogroup in DATA['object-groups']:
         result = result + brk + 'edit ' + ogroup['name'] + '\n'
         if ogroup.get('description'):
-            result = result + brk * 2 + 'set comment ' + ogroup['description'] + '\n'
+            result = result + brk * 2 + 'set comment "' + ogroup['description'] + '"\n'
         members = str()
         for member in ogroup.get('items'):
             if member[0] == 'group-object':  # add child o-group to list of members
