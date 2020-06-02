@@ -45,4 +45,8 @@ def getinterfaces(DATA) -> dict:
                     interface_params["shutdown"] = True
                 if data[0] == "description":
                     interface_params["description"] = ' '.join(map(str, data[1:]))
+                if data[0] == "ip" and data[1] == "helper-address":
+                    if not interface_params.get('dhcp-relay'):
+                        interface_params['dhcp-relay'] = list()
+                    interface_params['dhcp-relay'].append(data[2])
     return result

@@ -35,6 +35,9 @@ def setinterfaces(DATA: dict) -> str:
                 result = result + brk * 3 + 'next\n'
                 n += 1
             result = result + brk * 2 + 'end\n'
+        if params.get('dhcp-relay'):
+            result = result + brk * 2 + 'set dhcp-relay-service enable\n'
+            result = result + brk * 2 + 'set dhcp-relay-ip ' + ' '.join(map(str, params['dhcp-relay'])) + '\n'
         result = result + brk + 'next\n'
     print('Interfaces converted')
     result = result + 'end\n'
