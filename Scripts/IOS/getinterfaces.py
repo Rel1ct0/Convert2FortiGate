@@ -34,8 +34,13 @@ def getinterfaces(DATA) -> dict:
                 if data[0] == "vlan":
                     interface_params["vlan"] = data[1]
                 if data[0] == "ip" and data[1] == "address":
-                    interface_params["ip"] = data[2]
-                    interface_params["netmask"] = data[3]
+                    if data[-1] == 'secondary':
+                        if not interface_params.get('secondary'):
+                            interface_params['secondary'] = list()
+                        interface_params['secondary'].append((data[2], data[3]))
+                    else:
+                        interface_params["ip"] = data[2]
+                        interface_params["netmask"] = data[3]
                 if data[0] == "shutdown":
                     interface_params["shutdown"] = True
                 if data[0] == "description":
