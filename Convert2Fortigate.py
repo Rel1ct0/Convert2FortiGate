@@ -39,3 +39,4 @@ try:
 except Exception as error:
     print("Can not open", OUTFILE, "for writing, got", error)
     exit()
+

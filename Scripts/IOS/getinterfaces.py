@@ -51,4 +51,16 @@ def getinterfaces(DATA) -> dict:
                     interface_params['dhcp-relay'].append(data[2])
                 if data[0] == "zone-member":
                     interface_params["zone"] = data[2]
+                if data[0] == "standby" or data[0] == "vrrp":
+                    if not interface_params.get('vrrp'):  # Interface has HSRP or VRRP group(s)
+                        interface_params['vrrp'] = dict()
+                    if data[1].isdigit():
+                        if not interface_params['vrrp'].get(data[1]):  # New VRRP group
+                            interface_params['vrrp'][data[1]] = dict()
+                        if data[2] == 'ip':
+                            interface_params['vrrp'][data[1]]['ip'] = data[3]
+                        if data[2] == 'priority':
+                            interface_params['vrrp'][data[1]]['priority'] = data[3]
+                        if data[2] == 'authentication':
+                            interface_params['vrrp'][data[1]]['authentication'] = data[3]
     return result

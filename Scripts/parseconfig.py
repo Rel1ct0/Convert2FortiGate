@@ -22,6 +22,7 @@ def parseconfig(RAWDATA, FWTYPE) -> dict:
         result["interfaces"] = IOS.getinterfaces(RAWDATA)
         result["zones"] = IOS.getzones(result["interfaces"])
         result["object-groups"] = IOS.getobjectgroups(RAWDATA)
+        result["acls"] = IOS.getacls(RAWDATA)
 
     return result
 

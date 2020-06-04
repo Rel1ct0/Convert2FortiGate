@@ -38,6 +38,17 @@ def setinterfaces(DATA: dict) -> str:
         if params.get('dhcp-relay'):
             result = result + brk * 2 + 'set dhcp-relay-service enable\n'
             result = result + brk * 2 + 'set dhcp-relay-ip ' + ' '.join(map(str, params['dhcp-relay'])) + '\n'
+        if params.get('vrrp'):
+            result = result + brk * 2 + 'config vrrp\n'
+            for group, items in params['vrrp'].items():
+                result = result + brk * 3 + 'edit ' + group + '\n'
+                result = result + brk * 4 + 'set vrgrp ' + group + '\n'
+                if items.get('ip'):
+                    result = result + brk * 4 + 'set vrip ' + items['ip'] + '\n'
+                if items.get('priority'):
+                    result = result + brk * 4 + 'set priority ' + items['priority'] + '\n'
+                result = result + brk * 3 + 'next' + '\n'
+            result = result + brk * 2 + 'end\n'
         result = result + brk + 'next\n'
     print('Interfaces converted')
     result = result + 'end\n'
