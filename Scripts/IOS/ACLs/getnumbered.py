@@ -49,7 +49,8 @@ def getnumbered(DATA) -> dict:
                                 ACE['src']['mask'] = '255.255.255.255'
                         ACE['dst'] = dict()
                         ACE['dst']['ip'] = 'any'
-                        ACE['proto'] = 'ip'
+                        ACE['service'] = dict()
+                        ACE['service']['proto'] = 'ip'
                     result[data[1]].append(ACE)
                 if (100 <= int(data[1]) < 200) or (2000 <= int(data[1]) < 2700):  # Extended ACL
                     ACLName = data[1]

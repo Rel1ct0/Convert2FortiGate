@@ -66,7 +66,8 @@ def getnamed(DATA) -> dict:
                             ACE['src']['mask'] = '255.255.255.255'
                     ACE['dst'] = dict()
                     ACE['dst']['ip'] = 'any'
-                    ACE['proto'] = 'ip'
+                    ACE['service'] = dict()
+                    ACE['service']['proto'] = 'ip'
                 ACL.append(ACE)
             else:
                 StdACL_detected = False
