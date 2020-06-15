@@ -1,3 +1,19 @@
+def getport(port: str):
+    portmatch = {'bgp': '179', 'chargen': '19', 'cmd': '514', 'daytime': '13', 'discard': '9', 'domain': '53',
+                 'echo': '7', 'exec': '512', 'finger': '79', 'ftp': '21', 'ftp-data': '20', 'gopher': '70',
+                 'hostname': '101', 'ident': '113', 'irc': '194', 'klogin': '543', 'kshell': '544', 'login': '513',
+                 'lpd': '515', 'msrpc': '135', 'nntp': '119', 'onep-plain': '15001', 'onep-tls': '15002',
+                 'pim-auto-rp': '496', 'pop2': '109', 'pop3': '110', 'smtp': '25', 'sunrpc': '111', 'tacacs': '49',
+                 'talk': '517', 'telnet': '23', 'uucp': '540', 'whois': '43', 'www': '80', 'biff': '512',
+                 'bootpc': '68', 'bootps': '67', 'dnsix': '195', 'isakmp': '500', 'mobile-ip': '434',
+                 'nameserver': '42', 'netbios-dgm': '138', 'netbios-ns': '137', 'netbios-ss': '139',
+                 'non500-isakmp': '4500', 'ntp': '123', 'rip': '520', 'ripv6': '521', 'snmp': '161',
+                 'snmptrap': '162', 'syslog': '514', 'tftp': '69', 'time': '37', 'who': '513', 'xdmcp': '177'}
+    if not port.isdigit():
+        return portmatch[port]
+    return port
+
+
 def getnumbered(DATA) -> dict:
     result = dict()
     for _ in DATA:
@@ -63,12 +79,12 @@ def getnumbered(DATA) -> dict:
                             ACE['src']['mask'] = '.'.join(mask)
                             data = data[6:]  # Cut off src
                         if data[0] in ['eq', 'gt', 'lt', 'neq']:  # Is source port defined?
-                            ACE['src']['srcport'] = data[1]
+                            ACE['src']['srcport'] = getport(data[1])
                             ACE['src']['srcport_compare'] = data[0]
                             data = data[2:]
                         elif data[0] == 'range':
-                            ACE['src']['srcport'] = data[1]
-                            ACE['src']['srcport_end'] = data[2]
+                            ACE['src']['srcport'] = getport(data[1])
+                            ACE['src']['srcport_end'] = getport(data[2])
                             ACE['src']['port_compare'] = data[0]
                             data = data[3:]
                         ACE['dst'] = dict()
@@ -87,11 +103,11 @@ def getnumbered(DATA) -> dict:
                             data = data[2:]  # Cut off src
                         if data:  # Dst port can be absent
                             if data[0] in ['eq', 'gt', 'lt', 'neq']:
-                                ACE['dst']['dstport'] = data[1]
+                                ACE['dst']['dstport'] = getport(data[1])
                                 ACE['dst']['dstport_compare'] = data[0]
                             elif data[0] == 'range':
-                                ACE['dst']['dstport'] = data[1]
-                                ACE['dst']['dstport_end'] = data[2]
+                                ACE['dst']['dstport'] = getport(data[1])
+                                ACE['dst']['dstport_end'] = getport(data[2])
                                 ACE['dst']['dstport_compare'] = data[0]
                     result[ACLName].append(ACE)
     return result

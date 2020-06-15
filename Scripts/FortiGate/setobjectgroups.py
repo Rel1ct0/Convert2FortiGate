@@ -14,7 +14,7 @@ def setobjectgroups(DATA: dict) -> str:
             if member[0] == 'group-object':  # add child o-group to list of members
                 members = members + ' "' + member[1] + '"'
             if member[0] == 'host':  # add child object to list of members
-                object_name = 'host_' + member[1]
+                object_name = 'Host_' + member[1]
                 if not DATA['objects'].get(object_name):  # object defined in object group, we must create it
                     DATA['objects'][object_name] = dict()
                     DATA['objects'][object_name]['type'] = 'subnet'
@@ -22,7 +22,7 @@ def setobjectgroups(DATA: dict) -> str:
                     DATA['objects'][object_name]['mask'] = '255.255.255.255'
                 members = members + ' "' + object_name + '"'
             if member[0] == 'network':  # add child object to list of members
-                object_name = 'net_' + member[1] + '_' + member[2]
+                object_name = 'Net_' + member[1] + '_' + member[2]
                 if not DATA['objects'].get(object_name):  # object defined in object group, we must create it
                     DATA['objects'][object_name] = dict()
                     DATA['objects'][object_name]['type'] = 'subnet'

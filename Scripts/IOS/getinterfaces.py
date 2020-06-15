@@ -63,4 +63,6 @@ def getinterfaces(DATA) -> dict:
                             interface_params['vrrp'][data[1]]['priority'] = data[3]
                         if data[2] == 'authentication':
                             interface_params['vrrp'][data[1]]['authentication'] = data[3]
+                if data[0] == "ip" and data[1] == "access-group" and data[3] == "in":
+                    interface_params["acl-in"] = data[2]
     return result

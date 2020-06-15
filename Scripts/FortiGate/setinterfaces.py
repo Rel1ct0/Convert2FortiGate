@@ -52,5 +52,6 @@ def setinterfaces(DATA: dict) -> str:
         result = result + brk + 'next\n'
     print('Interfaces converted')
     result = result + 'end\n'
+
     DATA['interface_map'] = interface_map
     return result

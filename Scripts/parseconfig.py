@@ -29,10 +29,16 @@ def parseconfig(RAWDATA, FWTYPE) -> dict:
 
 def createconfig(STRUCTDATA) -> str:
     result = str()
+
+    result = result + 'config system settings\n'
+    result = result + '    set gui-multiple-interface-policy enable\n'
+    result = result + 'end\n'
+
     result = result + FortiGate.setinterfaces(STRUCTDATA)
     result = result + FortiGate.setzones(STRUCTDATA)
     objectgroups = FortiGate.setobjectgroups(STRUCTDATA)
     objects = FortiGate.setobjects(STRUCTDATA)
     result = result + objects
     result = result + objectgroups
+    result = result + FortiGate.setfirewallpolicy(STRUCTDATA)
     return result
