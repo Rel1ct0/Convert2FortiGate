@@ -63,7 +63,8 @@ def getnumbered(DATA) -> dict:
                             ACE['action'] = 'allow'
                         else:
                             ACE['action'] = 'deny'
-                        ACE['proto'] = data[3]
+                        ACE['service'] = dict()
+                        ACE['service']['proto'] = data[3]
                         ACE['src'] = dict()
                         if data[4] == 'any':  # Source
                             ACE['src']['ip'] = 'any'
@@ -79,13 +80,13 @@ def getnumbered(DATA) -> dict:
                             ACE['src']['mask'] = '.'.join(mask)
                             data = data[6:]  # Cut off src
                         if data[0] in ['eq', 'gt', 'lt', 'neq']:  # Is source port defined?
-                            ACE['src']['srcport'] = getport(data[1])
-                            ACE['src']['srcport_compare'] = data[0]
+                            ACE['service']['srcport'] = getport(data[1])
+                            ACE['service']['srcport_compare'] = data[0]
                             data = data[2:]
                         elif data[0] == 'range':
-                            ACE['src']['srcport'] = getport(data[1])
-                            ACE['src']['srcport_end'] = getport(data[2])
-                            ACE['src']['port_compare'] = data[0]
+                            ACE['service']['srcport'] = getport(data[1])
+                            ACE['service']['srcport_end'] = getport(data[2])
+                            ACE['service']['srcport_compare'] = data[0]
                             data = data[3:]
                         ACE['dst'] = dict()
                         if data[0] == 'any':  # Destination
@@ -103,11 +104,11 @@ def getnumbered(DATA) -> dict:
                             data = data[2:]  # Cut off src
                         if data:  # Dst port can be absent
                             if data[0] in ['eq', 'gt', 'lt', 'neq']:
-                                ACE['dst']['dstport'] = getport(data[1])
-                                ACE['dst']['dstport_compare'] = data[0]
+                                ACE['service']['dstport'] = getport(data[1])
+                                ACE['service']['dstport_compare'] = data[0]
                             elif data[0] == 'range':
-                                ACE['dst']['dstport'] = getport(data[1])
-                                ACE['dst']['dstport_end'] = getport(data[2])
-                                ACE['dst']['dstport_compare'] = data[0]
+                                ACE['service']['dstport'] = getport(data[1])
+                                ACE['service']['dstport_end'] = getport(data[2])
+                                ACE['service']['dstport_compare'] = data[0]
                     result[ACLName].append(ACE)
     return result
