@@ -95,7 +95,7 @@ def getnamed(DATA) -> dict:
                         ACE['src']['mask'] = '255.255.255.255'
                         data = data[4:]  # Cut off src
                     elif data[2] == 'object-group':
-                        ACE['src']['ogroup'] = data[3]
+                        ACE['src']['object'] = data[3]
                         data = data[4:]  # Cut off src
                     else:
                         ACE['src']['ip'] = data[2]
@@ -121,7 +121,7 @@ def getnamed(DATA) -> dict:
                         ACE['dst']['mask'] = '255.255.255.255'
                         data = data[2:]  # Cut off src
                     elif data[0] == 'object-group':
-                        ACE['dst']['ogroup'] = data[1]
+                        ACE['dst']['object'] = data[1]
                         data = data[2:]  # Cut off src
                     else:
                         ACE['dst']['ip'] = data[0]
