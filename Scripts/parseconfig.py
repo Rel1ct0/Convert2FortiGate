@@ -5,6 +5,8 @@ import Scripts.ASA as ASA
 import Scripts.IOS as IOS
 import Scripts.FortiGate as FortiGate
 
+import pprint
+
 
 SUPPORTED_FWTYPES = ['1', 'asa', '2', 'ios']
 
@@ -40,5 +42,9 @@ def createconfig(STRUCTDATA) -> str:
     objects = FortiGate.setobjects(STRUCTDATA)
     result = result + objects
     result = result + objectgroups
+
+    with open('rawdict2.txt', 'w') as raw:  # Temp file with extracted config to be converted
+        raw.write(pprint.pformat(STRUCTDATA))
+
     result = result + FortiGate.setfirewallpolicy(STRUCTDATA)
     return result
