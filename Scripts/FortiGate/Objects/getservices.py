@@ -65,9 +65,9 @@ def getservices(DATA: dict) -> None:
                         ports = ports + dstportstart + '-' + dstportend
                         DATA['objects']['service'][name]['ports'] = ports
                 else:
-                    name = 'Proto_' + ace['service']['proto']
+                    name = 'PROTO_' + ace['service']['proto'].upper()
                     if not DATA['objects']['service'].get(name):
-                        print('Service', name.upper(), 'does not exist, creating')
-                    DATA['objects']['service'][name.upper()] = dict()
-                    DATA['objects']['service'][name.upper()]['proto'] = getservice(ace['service']['proto'])
+                        print('Service', name, 'does not exist, creating')
+                    DATA['objects']['service'][name] = dict()
+                    DATA['objects']['service'][name]['proto'] = getservice(ace['service']['proto'])
     return
