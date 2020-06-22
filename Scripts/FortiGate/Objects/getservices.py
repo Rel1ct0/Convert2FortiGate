@@ -19,12 +19,12 @@ def getservices(DATA: dict) -> None:
                     srcportend = ''
                     dstportstart = '1'
                     dstportend = '65535'
-                    name = ace['service']['proto'].upper() + '_'
+                    name = ace['service']['proto'].upper()
                     if ace['service'].get('dstport_compare'):
                         if ace['service']['dstport_compare'] == 'lt':
-                            name = name + '1-'
+                            name = name + '_1-'
                             dstportend = ace['service']['dstport']
-                        name = name + ace['service']['dstport']
+                        name = name + '_' + ace['service']['dstport']
                         if ace['service']['dstport_compare'] == 'eq':
                             dstportstart = ace['service']['dstport']
                             dstportend = ace['service']['dstport']
@@ -36,9 +36,7 @@ def getservices(DATA: dict) -> None:
                             dstportstart = ace['service']['dstport']
                             dstportend = ace['service']['dstport_end']
                     if ace['service'].get('srcport_compare'):
-                        if ace['service'].get('dstport_compare'):  # Beautiful underscore, not a mistake
-                            name = name + '_'
-                        name = name + 'SRC_'
+                        name = name + '_SRC_'
                         if ace['service']['srcport_compare'] == 'eq':
                             srcportstart = ace['service']['srcport']
                             srcportend = ace['service']['srcport']
