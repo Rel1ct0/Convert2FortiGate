@@ -1,3 +1,11 @@
+def getservice(proto: str):
+    protomatch = {'icmp': '1', 'igmp': '2', 'ipinip': '4', 'tcp': '6', 'udp': '17', 'gre': '47',
+                  'esp': '50', 'ahp': '51', 'eigrp': '88', 'ospf': '89', 'nos': '94', 'pim': '103',
+                  'pcp': '108'}
+    if not proto.isdigit():
+        return protomatch[proto]
+    return proto
+
 def getservices(DATA: dict) -> None:
     for interface, iface_params in DATA.get('interfaces').items():  # Check all interfaces
         if acl := iface_params.get('acl-in'):  # Check applied ACLs
@@ -57,5 +65,9 @@ def getservices(DATA: dict) -> None:
                         ports = ports + dstportstart + '-' + dstportend
                         DATA['objects']['service'][name]['ports'] = ports
                 else:
-                    print ('OMG, Protocol', ace['service']['proto'])
+                    name = 'Proto_' + ace['service']['proto']
+                    if not DATA['objects']['service'].get(name):
+                        print('Service', name.upper(), 'does not exist, creating')
+                    DATA['objects']['service'][name.upper()] = dict()
+                    DATA['objects']['service'][name.upper()]['proto'] = getservice(ace['service']['proto'])
     return
