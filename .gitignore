@@ -129,5 +129,6 @@ dmypy.json
 .pyre/
 /rawrict.txt
 /rawdict.txt
+/rawdict2.txt
 /TestData/
 /fgateconfig.txt
