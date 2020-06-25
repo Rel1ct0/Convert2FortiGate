@@ -9,63 +9,68 @@ def getservice(proto: str):
 def getservices(DATA: dict) -> None:
     for interface, iface_params in DATA.get('interfaces').items():  # Check all interfaces
         if acl := iface_params.get('acl-in'):  # Check applied ACLs
-            for ace in DATA['acls'][acl]:
-                if not ace.get('service'):
+            for counter in range(0, len(DATA['acls'][acl])):  # For every line in ACL
+                if not DATA['acls'][acl][counter].get('service'):
+                    DATA['acls'][acl][counter]['service'] = dict()
+                    DATA['acls'][acl][counter]['service']['object'] = 'all'
                     continue
-                if ace['service']['proto'] == 'ip':  # Nothing to do here
+                if DATA['acls'][acl][counter]['service']['proto'] == 'ip':  # Nothing to do here
+                    DATA['acls'][acl][counter]['service']['object'] = 'all'
                     continue
-                if ace['service']['proto'] in ['tcp', 'udp']:
+                if DATA['acls'][acl][counter]['service']['proto'] in ['tcp', 'udp']:
                     srcportstart = ''
                     srcportend = ''
                     dstportstart = '1'
                     dstportend = '65535'
-                    name = ace['service']['proto'].upper()
-                    if ace['service'].get('dstport_compare'):
-                        if ace['service']['dstport_compare'] == 'lt':
+                    name = DATA['acls'][acl][counter]['service']['proto'].upper()
+                    if DATA['acls'][acl][counter]['service'].get('dstport_compare'):
+                        if DATA['acls'][acl][counter]['service']['dstport_compare'] == 'lt':
                             name = name + '_1-'
-                            dstportend = ace['service']['dstport']
-                        name = name + '_' + ace['service']['dstport']
-                        if ace['service']['dstport_compare'] == 'eq':
-                            dstportstart = ace['service']['dstport']
-                            dstportend = ace['service']['dstport']
-                        if ace['service']['dstport_compare'] == 'ge':
+                            dstportend = DATA['acls'][acl][counter]['service']['dstport']
+                        name = name + '_' + DATA['acls'][acl][counter]['service']['dstport']
+                        if DATA['acls'][acl][counter]['service']['dstport_compare'] == 'eq':
+                            dstportstart = DATA['acls'][acl][counter]['service']['dstport']
+                            dstportend = DATA['acls'][acl][counter]['service']['dstport']
+                        if DATA['acls'][acl][counter]['service']['dstport_compare'] == 'ge':
                             name = name + '-65535'
-                            dstportstart = ace['service']['dstport']
-                        if ace['service']['dstport_compare'] == 'range':
-                            name = name + '-' + ace['service']['dstport_end']
-                            dstportstart = ace['service']['dstport']
-                            dstportend = ace['service']['dstport_end']
-                    if ace['service'].get('srcport_compare'):
+                            dstportstart = DATA['acls'][acl][counter]['service']['dstport']
+                        if DATA['acls'][acl][counter]['service']['dstport_compare'] == 'range':
+                            name = name + '-' + DATA['acls'][acl][counter]['service']['dstport_end']
+                            dstportstart = DATA['acls'][acl][counter]['service']['dstport']
+                            dstportend = DATA['acls'][acl][counter]['service']['dstport_end']
+                    if DATA['acls'][acl][counter]['service'].get('srcport_compare'):
                         name = name + '_SRC_'
-                        if ace['service']['srcport_compare'] == 'eq':
-                            srcportstart = ace['service']['srcport']
-                            srcportend = ace['service']['srcport']
-                        if ace['service']['srcport_compare'] == 'lt':
+                        if DATA['acls'][acl][counter]['service']['srcport_compare'] == 'eq':
+                            srcportstart = DATA['acls'][acl][counter]['service']['srcport']
+                            srcportend = DATA['acls'][acl][counter]['service']['srcport']
+                        if DATA['acls'][acl][counter]['service']['srcport_compare'] == 'lt':
                             name = name + '1-'
                             srcportstart = '1'
-                            srcportend = ace['service']['srcport']
-                        name = name + ace['service']['srcport']
-                        if ace['service']['srcport_compare'] == 'ge':
+                            srcportend = DATA['acls'][acl][counter]['service']['srcport']
+                        name = name + DATA['acls'][acl][counter]['service']['srcport']
+                        if DATA['acls'][acl][counter]['service']['srcport_compare'] == 'ge':
                             name = name + '-65535'
-                            srcportstart = ace['service']['srcport']
+                            srcportstart = DATA['acls'][acl][counter]['service']['srcport']
                             srcportend = '65535'
-                        if ace['service']['srcport_compare'] == 'range':
-                            name = name + '-' + ace['service']['srcport_end']
-                            srcportstart = ace['service']['srcport']
-                            srcportend = ace['service']['srcport_end']
+                        if DATA['acls'][acl][counter]['service']['srcport_compare'] == 'range':
+                            name = name + '-' + DATA['acls'][acl][counter]['service']['srcport_end']
+                            srcportstart = DATA['acls'][acl][counter]['service']['srcport']
+                            srcportend = DATA['acls'][acl][counter]['service']['srcport_end']
                     if not DATA['objects']['service'].get(name):  # Service does not exist, create it
                         print('Service', name, 'does not exist, creating')
                         DATA['objects']['service'][name] = dict()
-                        DATA['objects']['service'][name]['proto'] = ace['service']['proto']
+                        DATA['objects']['service'][name]['proto'] = DATA['acls'][acl][counter]['service']['proto']
                         ports = srcportstart
                         if srcportend:
                             ports = ports + '-' + srcportend + ':'
                         ports = ports + dstportstart + '-' + dstportend
                         DATA['objects']['service'][name]['ports'] = ports
+
                 else:
-                    name = 'PROTO_' + ace['service']['proto'].upper()
+                    name = 'PROTO_' + DATA['acls'][acl][counter]['service']['proto'].upper()
                     if not DATA['objects']['service'].get(name):
                         print('Service', name, 'does not exist, creating')
                     DATA['objects']['service'][name] = dict()
-                    DATA['objects']['service'][name]['proto'] = getservice(ace['service']['proto'])
+                    DATA['objects']['service'][name]['proto'] = getservice(DATA['acls'][acl][counter]['service']['proto'])
+                DATA['acls'][acl][counter]['service']['object'] = name
     return

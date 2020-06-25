@@ -17,9 +17,11 @@ def setfirewallpolicy(DATA: dict) -> str:
                     comment = str()
                 result = result + brk * 2 + 'set srcintf ' + DATA['interface_map'][interface] + '\n'
                 result = result + brk * 2 + 'set dstintf any\n'
+                result = result + brk * 2 + 'set srcaddr ' + ace['src']['object'] + '\n'
+                result = result + brk * 2 + 'set dstaddr ' + ace['dst']['object'] + '\n'
                 if ace['action'] == 'allow':
                     result = result + brk * 2 + 'set action accept\n'
-               # result = result + brk * 2 + 'set service ' + ace['service']['object'] + '\n'
+                result = result + brk * 2 + 'set service ' + ace['service']['object'] + '\n'
                 result = result + brk + 'next\n'
                 rule_counter += 1
         else:  # Interface does not have ACL applied
