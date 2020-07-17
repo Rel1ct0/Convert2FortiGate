@@ -27,7 +27,7 @@ def setinterfaces(DATA: dict) -> str:
         if params['shutdown']:
             result = result + brk * 2 + 'set status down\n'
         if params.get('secondary'):
-            result = result + brk * 2 + 'set secondary-ip enable\n'
+            result = result + brk * 2 + 'set secondary-IP enable\n'
             result = result + brk * 2 + 'config secondaryip\n'
             n = 1
             for nextIp in params['secondary']:

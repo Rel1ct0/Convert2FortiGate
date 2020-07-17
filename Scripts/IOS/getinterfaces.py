@@ -55,14 +55,17 @@ def getinterfaces(DATA) -> dict:
                     if not interface_params.get('vrrp'):  # Interface has HSRP or VRRP group(s)
                         interface_params['vrrp'] = dict()
                     if data[1].isdigit():
-                        if not interface_params['vrrp'].get(data[1]):  # New VRRP group
-                            interface_params['vrrp'][data[1]] = dict()
+                        group_num = data[1]
+                        if group_num == '0':
+                            group_num = '255'
+                        if not interface_params['vrrp'].get(group_num):  # New VRRP group
+                            interface_params['vrrp'][group_num] = dict()
                         if data[2] == 'ip':
-                            interface_params['vrrp'][data[1]]['ip'] = data[3]
+                            interface_params['vrrp'][group_num]['ip'] = data[3]
                         if data[2] == 'priority':
-                            interface_params['vrrp'][data[1]]['priority'] = data[3]
+                            interface_params['vrrp'][group_num]['priority'] = data[3]
                         if data[2] == 'authentication':
-                            interface_params['vrrp'][data[1]]['authentication'] = data[3]
+                            interface_params['vrrp'][group_num]['authentication'] = data[3]
                 if data[0] == "ip" and data[1] == "access-group" and data[3] == "in":
                     interface_params["acl-in"] = data[2]
     return result
