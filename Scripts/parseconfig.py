@@ -22,7 +22,7 @@ def parseconfig(RAWDATA, FWTYPE) -> dict:
         result["interfaces"] = ASA.getinterfaces(RAWDATA)
     if FWTYPE in SUPPORTED_FWTYPES[2:4]:
         result["interfaces"] = IOS.getinterfaces(RAWDATA)
-        result["zones"] = IOS.getzones(result["interfaces"])
+        #result["zones"] = IOS.getzones(result["interfaces"])
         result["object-groups"] = IOS.getobjectgroups(RAWDATA)
         result["acls"] = IOS.getacls(RAWDATA)
 
@@ -38,7 +38,7 @@ def createconfig(STRUCTDATA) -> str:
     result = result + 'end\n'
 
     result = result + FortiGate.setinterfaces(STRUCTDATA)
-    result = result + FortiGate.setzones(STRUCTDATA)
+    #result = result + FortiGate.setzones(STRUCTDATA)
     objectgroups = FortiGate.setobjectgroups(STRUCTDATA)
     objects = FortiGate.setobjects(STRUCTDATA)
     result = result + objects

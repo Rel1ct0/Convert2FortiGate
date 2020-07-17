@@ -8,7 +8,7 @@ def setzones(DATA: dict) -> str:
                 real_members.append(DATA['interface_map'][member])
         if real_members:  # Do not create a zone with no members
             result = result + brk + 'edit ' + zone + '\n'
-            result = result + brk * 2 + 'set members ' + ' '.join(map(str, real_members)) + '\n'
+          #  result = result + brk * 2 + 'set interface ' + ' '.join(map(str, real_members)) + '\n'
             result = result + brk + 'next\n'
     result = result + 'end\n'
     return result
