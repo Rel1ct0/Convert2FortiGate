@@ -20,6 +20,7 @@ def setinterfaces(DATA: dict) -> str:
             result = result + brk * 2 + 'set interface ' + interface_map[params['parent']] + '\n'
             result = result + brk * 2 + 'set vlanid ' + params['vlan'] + '\n'
         if params.get('ip'):
+            result = result + brk * 2 + 'set mode static\n'
             result = result + brk * 2 + 'set ip ' + params['ip'] + ' ' + params['netmask'] + '\n'
         if params.get('description'):
             result = result + brk * 2 + 'set description "' + params['description'] + '"\n'
