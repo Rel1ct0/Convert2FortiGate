@@ -57,7 +57,7 @@ def getservices(DATA: dict) -> None:
                             srcportstart = DATA['acls'][acl][counter]['service']['srcport']
                             srcportend = DATA['acls'][acl][counter]['service']['srcport_end']
                     if not DATA['objects']['service'].get(name):  # Service does not exist, create it
-                        print('Service', name, 'does not exist, creating')
+                        # print('Service', name, 'does not exist, creating')
                         DATA['objects']['service'][name] = dict()
                         DATA['objects']['service'][name]['proto'] = DATA['acls'][acl][counter]['service']['proto']
                         ports = srcportstart
@@ -68,8 +68,8 @@ def getservices(DATA: dict) -> None:
 
                 else:
                     name = 'PROTO_' + DATA['acls'][acl][counter]['service']['proto'].upper()
-                    if not DATA['objects']['service'].get(name):
-                        print('Service', name, 'does not exist, creating')
+                    # if not DATA['objects']['service'].get(name):
+                    #    print('Service', name, 'does not exist, creating')
                     DATA['objects']['service'][name] = dict()
                     DATA['objects']['service'][name]['proto'] = getservice(DATA['acls'][acl][counter]['service']['proto'])
                 DATA['acls'][acl][counter]['service']['object'] = name
