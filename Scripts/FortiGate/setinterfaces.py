@@ -49,6 +49,7 @@ def setinterfaces(DATA: dict) -> str:
                     result = result + brk * 4 + 'set priority ' + items['priority'] + '\n'
                 result = result + brk * 3 + 'next' + '\n'
             result = result + brk * 2 + 'end\n'
+        result = result + brk * 2 + 'set vdom root\n'
         result = result + brk + 'next\n'
     print('Interfaces converted')
     result = result + 'end\n'

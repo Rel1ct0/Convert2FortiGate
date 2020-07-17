@@ -34,6 +34,7 @@ def createconfig(STRUCTDATA) -> str:
 
     result = result + 'config system settings\n'
     result = result + '    set gui-multiple-interface-policy enable\n'
+    result = result + '    set central-nat enable\n'
     result = result + 'end\n'
 
     result = result + FortiGate.setinterfaces(STRUCTDATA)
